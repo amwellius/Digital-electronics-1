@@ -7,6 +7,4 @@
 [GitHub repository](https://github.com/amwellius/Digital-electronics-1)
 
 
-
-VUT:
 ![alt text](https://www.vutbr.cz/images/apple-touch-icon.png "Logo Title Text 1")
