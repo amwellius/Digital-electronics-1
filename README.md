@@ -9,4 +9,4 @@
 
 
 VUT:
-![alt text](https://www.vutbr.cz/ "Logo Title Text 1")
+![alt text]https://www.vutbr.cz/images/apple-touch-icon.png "Logo Title Text 1")
