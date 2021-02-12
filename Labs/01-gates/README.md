@@ -1,9 +1,9 @@
-#LAB 01-gates
-##PART 3
+# LAB 01-gates
+## PART 3
 ### a
 fotka 
 
-###b
+### b
 fotka + tabulka
 [logo]: images/part3_2.png "De Morgan's LAW Simulation"
 
