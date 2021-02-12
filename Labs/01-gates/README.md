@@ -1,7 +1,6 @@
 # LAB 01-gates
 ## PART 3
 ### a
-fotka 
 ![First Task ScreenShot](images/part3_1.PNG)
 ### b
 fotka + tabulka
