@@ -28,7 +28,7 @@
 ### Boolean postulates
 ![ScreenShot](images/EOYO_1.PNG)
 ### VHDL CODE design.vhd
-```
+```vhdl
 ------------------------------------------------------------------------
 --
 -- Example of basic OR, AND, XOR gates.
@@ -111,7 +111,7 @@ begin
 end architecture dataflow;
 ```
 ### VHDL CODE testbench.vhd
-```
+```vhdl
 ------------------------------------------------------------------------
 --
 -- Testbench for basic gates circuit.
