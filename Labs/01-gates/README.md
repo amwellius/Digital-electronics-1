@@ -5,7 +5,7 @@ fotka
 
 ### b
 fotka + tabulka
-![De Morgan's LAW Simulation](images/part3_2.png)
+![De Morgan's LAW Simulation](images/part3_2.PNG)
 
 | **c** | **b** |**a** | **f(c,b,a)** |
 | :-: | :-: | :-: | :-: |
