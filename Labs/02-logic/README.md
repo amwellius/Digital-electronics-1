@@ -39,7 +39,7 @@
 ![ScreenShot](images/part2_2.png)
 
 
-### MAP2
+### MAP3
 ### B < A
 ![ScreenShot](images/part2_3.png)
 
