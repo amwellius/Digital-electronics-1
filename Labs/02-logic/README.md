@@ -88,6 +88,17 @@ end architecture Behavioral;
 ```
 ### VHDL CODE testbench.vhd
 ```vhdl
+------------------------------------------------------------------------
+--
+-- Testbench for 4-bit binary comparator.
+-- EDA Playground
+--
+-- Copyright (c) 2020-2021 Tomas Fryza
+-- Dept. of Radio Electronics, Brno University of Technology, Czechia
+-- This work is licensed under the terms of the MIT license.
+--
+------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 
@@ -131,116 +142,116 @@ begin
 
 
         -- 0 test values
+        s_b <= "0001"; s_a <= "1111"; wait for 100 ns;        
+        -- Expected output
+        assert ((s_B_greater_A = '0') and (s_B_equals_A = '0') and (s_B_less_A = '1'))        
+        -- If false, then report an error
+        report "Test failed for input combination: 0001, 1111" severity error;
+        
+        -- 1 test values
+        s_b <= "0010"; s_a <= "1110"; wait for 100 ns;        
+        -- Expected output
+        assert ((s_B_greater_A = '0') and (s_B_equals_A = '0') and (s_B_less_A = '1'))        
+        -- If false, then report an error
+        report "Test failed for input combination: 0010, 1110" severity error;
+        
+        -- 2 test values				WRONG (001)
+        s_b <= "0011"; s_a <= "1101"; wait for 100 ns;        
+        -- Expected output
+        assert ((s_B_greater_A = '0') and (s_B_equals_A = '1') and (s_B_less_A = '0'))        
+        -- If false, then report an error
+        report "Test failed for input combination: 0011, 1101" severity error;
+        
+        -- 3 test values
+        s_b <= "0100"; s_a <= "1100"; wait for 100 ns;        
+        -- Expected output
+        assert ((s_B_greater_A = '0') and (s_B_equals_A = '0') and (s_B_less_A = '1'))        
+        -- If false, then report an error
+        report "Test failed for input combination: 0100, 1100" severity error;
+        
+        -- 4 test values
+        s_b <= "0101"; s_a <= "1011"; wait for 100 ns;        
+        -- Expected output
+        assert ((s_B_greater_A = '0') and (s_B_equals_A = '0') and (s_B_less_A = '1'))        
+        -- If false, then report an error
+        report "Test failed for input combination: 0101, 1011" severity error;
+        
+        -- 5 test values
+        s_b <= "0110"; s_a <= "1010"; wait for 100 ns;        
+        -- Expected output
+        assert ((s_B_greater_A = '0') and (s_B_equals_A = '0') and (s_B_less_A = '1'))        
+        -- If false, then report an error
+        report "Test failed for input combination: 0110, 1010" severity error;
+        
+        -- 6 test values
+        s_b <= "0111"; s_a <= "1001"; wait for 100 ns;        
+        -- Expected output
+        assert ((s_B_greater_A = '0') and (s_B_equals_A = '0') and (s_B_less_A = '1'))        
+        -- If false, then report an error
+        report "Test failed for input combination: 0111, 1001" severity error;
+        
+        -- 7 test values
+        s_b <= "1000"; s_a <= "1000"; wait for 100 ns;        
+        -- Expected output
+        assert ((s_B_greater_A = '0') and (s_B_equals_A = '1') and (s_B_less_A = '0'))        
+        -- If false, then report an error
+        report "Test failed for input combination: 1000, 1000" severity error;
+        
+        -- 8 test values
+        s_b <= "1001"; s_a <= "0111"; wait for 100 ns;        
+        -- Expected output
+        assert ((s_B_greater_A = '1') and (s_B_equals_A = '0') and (s_B_less_A = '0'))        
+        -- If false, then report an error
+        report "Test failed for input combination: 1001, 0111" severity error;
+        
+        -- 9 test values
+        s_b <= "1010"; s_a <= "0110"; wait for 100 ns;        
+        -- Expected output
+        assert ((s_B_greater_A = '1') and (s_B_equals_A = '0') and (s_B_less_A = '0'))        
+        -- If false, then report an error
+        report "Test failed for input combination: 1010, 0110" severity error;
+        
+        -- 10 test values
+        s_b <= "1011"; s_a <= "0101"; wait for 100 ns;        
+        -- Expected output
+        assert ((s_B_greater_A = '1') and (s_B_equals_A = '0') and (s_B_less_A = '0'))        
+        -- If false, then report an error
+        report "Test failed for input combination: 1011, 0101" severity error;
+        
+        -- 11 test values
+        s_b <= "1100"; s_a <= "0100"; wait for 100 ns;        
+        -- Expected output
+        assert ((s_B_greater_A = '1') and (s_B_equals_A = '0') and (s_B_less_A = '0'))        
+        -- If false, then report an error
+        report "Test failed for input combination: 1100, 0100" severity error;
+        
+        -- 12 test values
         s_b <= "0000"; s_a <= "0000"; wait for 100 ns;        
         -- Expected output
         assert ((s_B_greater_A = '0') and (s_B_equals_A = '1') and (s_B_less_A = '0'))        
         -- If false, then report an error
         report "Test failed for input combination: 0000, 0000" severity error;
         
-        -- 1 test values
-        s_b <= "0000"; s_a <= "0001"; wait for 100 ns;        
-        -- Expected output
-        assert ((s_B_greater_A = '0') and (s_B_equals_A = '0') and (s_B_less_A = '1'))        
-        -- If false, then report an error
-        report "Test failed for input combination: 0000, 0001" severity error;
-        
-        -- 2 test values
-        s_b <= "0000"; s_a <= "0010"; wait for 100 ns;        
-        -- Expected output
-        assert ((s_B_greater_A = '0') and (s_B_equals_A = '0') and (s_B_less_A = '1'))        
-        -- If false, then report an error
-        report "Test failed for input combination: 0000, 0010" severity error;
-        
-        -- 3 test values
-        s_b <= "0000"; s_a <= "0011"; wait for 100 ns;        
-        -- Expected output
-        assert ((s_B_greater_A = '0') and (s_B_equals_A = '0') and (s_B_less_A = '1'))        
-        -- If false, then report an error
-        report "Test failed for input combination: 0000, 0011" severity error;
-        
-        -- 4 test values
-        s_b <= "0001"; s_a <= "0000"; wait for 100 ns;        
-        -- Expected output
-        assert ((s_B_greater_A = '1') and (s_B_equals_A = '0') and (s_B_less_A = '0'))        
-        -- If false, then report an error
-        report "Test failed for input combination: 0001, 0000" severity error;
-        
-        -- 5 test values
-        s_b <= "0001"; s_a <= "0001"; wait for 100 ns;        
-        -- Expected output
-        assert ((s_B_greater_A = '0') and (s_B_equals_A = '1') and (s_B_less_A = '0'))        
-        -- If false, then report an error
-        report "Test failed for input combination: 0001, 0001" severity error;
-        
-        -- 6 test values
-        s_b <= "0001"; s_a <= "0010"; wait for 100 ns;        
-        -- Expected output
-        assert ((s_B_greater_A = '0') and (s_B_equals_A = '0') and (s_B_less_A = '1'))        
-        -- If false, then report an error
-        report "Test failed for input combination: 0001, 0010" severity error;
-        
-        -- 7 test values
-        s_b <= "0001"; s_a <= "0011"; wait for 100 ns;        
-        -- Expected output
-        assert ((s_B_greater_A = '0') and (s_B_equals_A = '0') and (s_B_less_A = '1'))        
-        -- If false, then report an error
-        report "Test failed for input combination: 0001, 0011" severity error;
-        
-        -- 8 test values
-        s_b <= "0010"; s_a <= "0000"; wait for 100 ns;        
-        -- Expected output
-        assert ((s_B_greater_A = '1') and (s_B_equals_A = '0') and (s_B_less_A = '0'))        
-        -- If false, then report an error
-        report "Test failed for input combination: 0010, 0000" severity error;
-        
-        -- 9 test values
-        s_b <= "0010"; s_a <= "0001"; wait for 100 ns;        
-        -- Expected output
-        assert ((s_B_greater_A = '1') and (s_B_equals_A = '0') and (s_B_less_A = '0'))        
-        -- If false, then report an error
-        report "Test failed for input combination: 0010, 0001" severity error;
-        
-        -- 10 test values
-        s_b <= "0010"; s_a <= "0010"; wait for 100 ns;        
-        -- Expected output				WRONG (010)
-        assert ((s_B_greater_A = '1') and (s_B_equals_A = '0') and (s_B_less_A = '1'))        
-        -- If false, then report an error
-        report "Test failed for input combination: 0010, 0010" severity error;
-        
-        -- 11 test values
-        s_b <= "0010"; s_a <= "0011"; wait for 100 ns;        
-        -- Expected output
-        assert ((s_B_greater_A = '0') and (s_B_equals_A = '0') and (s_B_less_A = '1'))        
-        -- If false, then report an error
-        report "Test failed for input combination: 0010, 0011" severity error;
-        
-        -- 12 test values
-        s_b <= "0011"; s_a <= "0000"; wait for 100 ns;        
-        -- Expected output
-        assert ((s_B_greater_A = '1') and (s_B_equals_A = '0') and (s_B_less_A = '0'))        
-        -- If false, then report an error
-        report "Test failed for input combination: 0011, 0000" severity error;
-        
         -- 13 test values
-        s_b <= "0011"; s_a <= "0001"; wait for 100 ns;        
-        -- Expected output				WRONG (100)
-        assert ((s_B_greater_A = '1') and (s_B_equals_A = '1') and (s_B_less_A = '0'))        
+        s_b <= "1101"; s_a <= "0011"; wait for 100 ns;        
+        -- Expected output
+        assert ((s_B_greater_A = '1') and (s_B_equals_A = '0') and (s_B_less_A = '0'))        
         -- If false, then report an error
         report "Test failed for input combination: 0011, 0001" severity error;
         
         -- 14 test values
-        s_b <= "0011"; s_a <= "0010"; wait for 100 ns;        
+        s_b <= "1110"; s_a <= "0010"; wait for 100 ns;        
         -- Expected output
         assert ((s_B_greater_A = '1') and (s_B_equals_A = '0') and (s_B_less_A = '0'))        
         -- If false, then report an error
-        report "Test failed for input combination: 0011, 0010" severity error;
+        report "Test failed for input combination: 1110, 0010" severity error;
         
         -- 15 test values
-        s_b <= "0011"; s_a <= "0011"; wait for 100 ns;        
+        s_b <= "1111"; s_a <= "0001"; wait for 100 ns;        
         -- Expected output
-        assert ((s_B_greater_A = '0') and (s_B_equals_A = '1') and (s_B_less_A = '0'))        
+        assert ((s_B_greater_A = '1') and (s_B_equals_A = '0') and (s_B_less_A = '0'))        
         -- If false, then report an error
-        report "Test failed for input combination: 0011, 0011" severity error;
+        report "Test failed for input combination: 1111, 0001" severity error;
         
         
         
@@ -255,22 +266,20 @@ begin
 
 end architecture testbench;
 
-
 ```
 
 ### Console Listing
 ```bash
-[2021-02-17 10:32:21 EST] ghdl -i design.vhd testbench.vhd  && ghdl -m  tb_comparator_4bit && ghdl -r  tb_comparator_4bit   --vcd=dump.vcd && sed -i 's/^U/X/g; s/^-/X/g; s/^H/1/g; s/^L/0/g' dump.vcd 
+[2021-02-17 12:23:54 EST] ghdl -i design.vhd testbench.vhd  && ghdl -m  tb_comparator_4bit && ghdl -r  tb_comparator_4bit   --vcd=dump.vcd && sed -i 's/^U/X/g; s/^-/X/g; s/^H/1/g; s/^L/0/g' dump.vcd 
 analyze design.vhd
 analyze testbench.vhd
 elaborate tb_comparator_4bit
 testbench.vhd:51:9:@0ms:(report note): Stimulus process started
-testbench.vhd:127:9:@1100ns:(assertion error): Test failed for input combination: 0010, 0010
-testbench.vhd:148:9:@1400ns:(assertion error): Test failed for input combination: 0011, 0001
+testbench.vhd:71:9:@300ns:(assertion error): Test failed for input combination: 0011, 1101
 testbench.vhd:173:9:@1600ns:(report note): Stimulus process finished
 Finding VCD file...
 ./dump.vcd
-[2021-02-17 10:32:22 EST] Opening EPWave...
+[2021-02-17 12:23:54 EST] Opening EPWave...
 Done
 ```
 
