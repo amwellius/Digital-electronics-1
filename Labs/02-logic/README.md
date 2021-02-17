@@ -31,19 +31,18 @@
 
 ## Part 2: A 2-bit comparator
 ### MAP1
+### B > A
 ![ScreenShot](images/part2_1.PNG)
 
 ### MAP2
+### B = A
 ![ScreenShot](images/part2_2.PNG)
 
-rovnice
-rovnice
 
 ### MAP2
+### B < A
 ![ScreenShot](images/part2_3.PNG)
 
-rovnice
-rovnice
 
 
 
