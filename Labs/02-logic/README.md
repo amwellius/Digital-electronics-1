@@ -61,7 +61,6 @@ entity comparator_4bit is
         b_i           : in  std_logic_vector(4 - 1 downto 0);
 
 
-        -- COMPLETE ENTITY DECLARATION
 
 
         B_less_A_o    	: out std_logic;       -- B is less than A
@@ -80,7 +79,6 @@ begin
     B_equals_A_o   	 <= '1' when (b_i = a_i) else '0';    
 
 
-    -- WRITE "GREATER" AND "EQUALS" ASSIGNMENTS HERE
 
 
 end architecture Behavioral;
@@ -88,16 +86,7 @@ end architecture Behavioral;
 ```
 ### VHDL CODE testbench.vhd
 ```vhdl
-------------------------------------------------------------------------
---
--- Testbench for 4-bit binary comparator.
--- EDA Playground
---
--- Copyright (c) 2020-2021 Tomas Fryza
--- Dept. of Radio Electronics, Brno University of Technology, Czechia
--- This work is licensed under the terms of the MIT license.
---
-------------------------------------------------------------------------
+
 
 library ieee;
 use ieee.std_logic_1164.all;
@@ -253,10 +242,7 @@ begin
         -- If false, then report an error
         report "Test failed for input combination: 1111, 0001" severity error;
         
-        
-        
-        
-        -- WRITE OTHER TESTS HERE
+
 
 
         -- Report a note at the end of stimulus process
