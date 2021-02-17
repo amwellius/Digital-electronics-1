@@ -36,7 +36,7 @@
 
 ### MAP2
 ### B = A
-![ScreenShot](images/part2_2.PNG)
+![ScreenShot](images/part2_2.png)
 
 
 ### MAP2
