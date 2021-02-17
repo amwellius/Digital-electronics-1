@@ -2,7 +2,7 @@
 
 ## LINKS
 ### Link to EDA PlayGround
-[EDA PlayGroud](https://www.edaplayground.com/x/GcJv)
+[EDA PlayGroud](https://www.edaplayground.com/playgrounds/user/242729)
 ### Link to GitHub repository
 [GitHub repository](https://github.com/amwellius/Digital-electronics-1)
 
