@@ -41,7 +41,7 @@
 
 ### MAP2
 ### B < A
-![ScreenShot](images/part2_3.PNG)
+![ScreenShot](images/part2_3.png)
 
 
 
