@@ -1,32 +1,18 @@
-# LAB 02-logic
+# LAB 03-vivado
 
-### Link to EDA PlayGround
-[EDA PlayGroud](https://www.edaplayground.com/x/ptjA)
+
 ### Link to GitHub repository
 [GitHub repository](https://github.com/amwellius/Digital-electronics-1)
 
 
 ## Part 1: Preparation tasks
-### Binary comparator truth table
-
-| **n** | **B[1:0]** | **A[1:0]** | **B > A** | **B = A** | **B < A** |
-| :-: | :-: | :-: | :-: | :-: | :-: |
-| 0 | 0 0 | 0 0 | 0 | 1 | 0 |
-| 1 | 0 0 | 0 1 | 0 | 0 | 1 |
-| 2 | 0 0 | 1 0 | 0 | 0 | 1 |
-| 3 | 0 0 | 1 1 | 0 | 0 | 1 |
-| 4 | 0 1 | 0 0 | 1 | 0 | 0 |
-| 5 | 0 1 | 0 1 | 0 | 1 | 0 |
-| 6 | 0 1 | 1 0 | 0 | 0 | 1 |
-| 7 | 0 1 | 1 1 | 0 | 0 | 1 |
-| 8 | 1 0 | 0 0 | 1 | 0 | 0 |
-| 9 | 1 0 | 0 1 | 1 | 0 | 0 |
-| 10 | 1 0 | 1 0 | 0 | 1 | 0 |
-| 11 | 1 0 | 1 1 | 0 | 0 | 1 |
-| 12 | 1 1 | 0 0 | 1 | 0 | 0 |
-| 13 | 1 1 | 0 1 | 1 | 0 | 0 |
-| 14 | 1 1 | 1 0 | 1 | 0 | 0 |
-| 15 | 1 1 | 1 1 | 0 | 1 | 0 |
+### Figure or table with connection of 16 slide switches and 16 LEDs on Nexys A7 board
+   From switches 0-15 (SW0-SW0) we are using switches SW0-SW7 and SW14 and SW15
+   From LEDs 0-15 (LD0-LD15) we are using LEDs LD0 and LD1
+   Used Schema link:
+   [Link](https://reference.digilentinc.com/reference/programmable-logic/nexys-a7/reference-manual)
+####SCHEMA:
+![ScreenShot](images/part1_1.png)    
 
 
 ## Part 2: A 2-bit comparator
