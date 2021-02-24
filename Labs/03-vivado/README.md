@@ -9,9 +9,9 @@
 ### Figure or table with connection of 16 slide switches and 16 LEDs on Nexys A7 board
    From switches 0-15 (SW0-SW0) we are using switches SW0-SW7 and SW14 and SW15 <br/>
    From LEDs 0-15 (LD0-LD15) we are using LEDs LD0 and LD1 <br/>
-   Used Schema link:
-   [Link](https://reference.digilentinc.com/reference/programmable-logic/nexys-a7/reference-manual)
-####SCHEMA:
+   Used Schema link: <br/>
+   [Link](https://reference.digilentinc.com/reference/programmable-logic/nexys-a7/reference-manual) <br/>
+####SCHEMA: <br/>
 ![ScreenShot](images/part1_1.png)    
 
 
