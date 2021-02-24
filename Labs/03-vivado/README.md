@@ -15,99 +15,29 @@
 ![ScreenShot](images/part1_1.png)    
 
 
-## Part 2: A 2-bit comparator
-### MAP1
-### B > A
-![ScreenShot](images/part2_1.PNG)
-
-### MAP2
-### B = A
-![ScreenShot](images/part2_2.png)
-
-
-### MAP3
-### B < A
-![ScreenShot](images/part2_3.png)
-
-
-
-
-## Part 3: A 4-bit binary comparator
-### VHDL CODE design.vhd
+## Part 2: Two-bit wide 4-to-1 multiplexer
+### Listing of VHDL architecture from source file mux_2bit_4to1.vhd with syntax highlighting
+### VHDL CODE 
 ```vhdl
-library ieee;
-use ieee.std_logic_1164.all;
-
 ------------------------------------------------------------------------
--- Entity declaration for 4-bit binary comparator
+-- Architecture body for mux_2bit_4to1 multiplexor
 ------------------------------------------------------------------------
-entity comparator_4bit is
-    port(
-        a_i           : in  std_logic_vector(4 - 1 downto 0);
-        b_i           : in  std_logic_vector(4 - 1 downto 0);
-
-
-
-
-        B_less_A_o    	: out std_logic;       -- B is less than A
-        B_greater_A_o 	: out std_logic;       -- B is greater than A
-        B_equals_A_o    : out std_logic        -- B equals A
-    );
-end entity comparator_4bit;
-
-------------------------------------------------------------------------
--- Architecture body for 4-bit binary comparator
-------------------------------------------------------------------------
-architecture Behavioral of comparator_4bit is
+architecture Behavioral of mux_2bit_4to1 is
 begin
-    B_less_A_o  	 <= '1' when (b_i < a_i) else '0';
-    B_greater_A_o  	 <= '1' when (b_i > a_i) else '0';
-    B_equals_A_o   	 <= '1' when (b_i = a_i) else '0';    
-
-
+    
+    f_o <=  a_i when (sel_i = "00") else 
+            b_i when (sel_i = "01") else
+            c_i when (sel_i = "10") else
+            d_i;     
 
 
 end architecture Behavioral;
-
 ```
-### VHDL CODE testbench.vhd
-```vhdl
 
-
-library ieee;
-use ieee.std_logic_1164.all;
-
-------------------------------------------------------------------------
--- Entity declaration for testbench
-------------------------------------------------------------------------
-entity tb_comparator_4bit is
-    -- Entity of testbench is always empty
-end entity tb_comparator_4bit;
-
-------------------------------------------------------------------------
--- Architecture body for testbench
-------------------------------------------------------------------------
-architecture testbench of tb_comparator_4bit is
-
-    -- Local signals
-    signal s_a       	 : std_logic_vector(4 - 1 downto 0);
-    signal s_b       	 : std_logic_vector(4 - 1 downto 0);
-    signal s_B_greater_A : std_logic;
-    signal s_B_equals_A  : std_logic;
-    signal s_B_less_A    : std_logic;
-
-begin
-    -- Connecting testbench signals with comparator_4bit entity (Unit Under Test)
-    uut_comparator_4bit : entity work.comparator_4bit
-        port map(
-            a_i           => s_a,
-            b_i           => s_b,
-            B_greater_A_o => s_B_greater_A,
-            B_equals_A_o  => s_B_equals_A,
-            B_less_A_o    => s_B_less_A
-        );
-
-    --------------------------------------------------------------------
+### Listing of VHDL stimulus process from testbench file tb_mux_2bit_4to1.vhd with syntax highlighting
+### VHDL CODE
+```vhld
+ --------------------------------------------------------------------
     -- Data generation process
     --------------------------------------------------------------------
     p_stimulus : process
@@ -115,130 +45,50 @@ begin
         -- Report a note at the begining of stimulus process
         report "Stimulus process started" severity note;
 
-
-        -- 0 test values
-        s_b <= "0001"; s_a <= "1111"; wait for 100 ns;        
-        -- Expected output
-        assert ((s_B_greater_A = '0') and (s_B_equals_A = '0') and (s_B_less_A = '1'))        
-        -- If false, then report an error
-        report "Test failed for input combination: 0001, 1111" severity error;
+       s_a <= "00";
+       s_b <= "01";
+       s_c <= "10";
+       s_d <= "11";
+       
+       s_sel <= "00"; wait for 100ns;
+       s_sel <= "01"; wait for 100ns;
+       s_sel <= "10"; wait for 100ns;
+       s_sel <= "11"; wait for 100ns;
         
-        -- 1 test values
-        s_b <= "0010"; s_a <= "1110"; wait for 100 ns;        
-        -- Expected output
-        assert ((s_B_greater_A = '0') and (s_B_equals_A = '0') and (s_B_less_A = '1'))        
-        -- If false, then report an error
-        report "Test failed for input combination: 0010, 1110" severity error;
-        
-        -- 2 test values				WRONG (001)
-        s_b <= "0011"; s_a <= "1101"; wait for 100 ns;        
-        -- Expected output
-        assert ((s_B_greater_A = '0') and (s_B_equals_A = '1') and (s_B_less_A = '0'))        
-        -- If false, then report an error
-        report "Test failed for input combination: 0011, 1101" severity error;
-        
-        -- 3 test values
-        s_b <= "0100"; s_a <= "1100"; wait for 100 ns;        
-        -- Expected output
-        assert ((s_B_greater_A = '0') and (s_B_equals_A = '0') and (s_B_less_A = '1'))        
-        -- If false, then report an error
-        report "Test failed for input combination: 0100, 1100" severity error;
-        
-        -- 4 test values
-        s_b <= "0101"; s_a <= "1011"; wait for 100 ns;        
-        -- Expected output
-        assert ((s_B_greater_A = '0') and (s_B_equals_A = '0') and (s_B_less_A = '1'))        
-        -- If false, then report an error
-        report "Test failed for input combination: 0101, 1011" severity error;
-        
-        -- 5 test values
-        s_b <= "0110"; s_a <= "1010"; wait for 100 ns;        
-        -- Expected output
-        assert ((s_B_greater_A = '0') and (s_B_equals_A = '0') and (s_B_less_A = '1'))        
-        -- If false, then report an error
-        report "Test failed for input combination: 0110, 1010" severity error;
-        
-        -- 6 test values
-        s_b <= "0111"; s_a <= "1001"; wait for 100 ns;        
-        -- Expected output
-        assert ((s_B_greater_A = '0') and (s_B_equals_A = '0') and (s_B_less_A = '1'))        
-        -- If false, then report an error
-        report "Test failed for input combination: 0111, 1001" severity error;
-        
-        -- 7 test values
-        s_b <= "1000"; s_a <= "1000"; wait for 100 ns;        
-        -- Expected output
-        assert ((s_B_greater_A = '0') and (s_B_equals_A = '1') and (s_B_less_A = '0'))        
-        -- If false, then report an error
-        report "Test failed for input combination: 1000, 1000" severity error;
-        
-        -- 8 test values
-        s_b <= "1001"; s_a <= "0111"; wait for 100 ns;        
-        -- Expected output
-        assert ((s_B_greater_A = '1') and (s_B_equals_A = '0') and (s_B_less_A = '0'))        
-        -- If false, then report an error
-        report "Test failed for input combination: 1001, 0111" severity error;
-        
-        -- 9 test values
-        s_b <= "1010"; s_a <= "0110"; wait for 100 ns;        
-        -- Expected output
-        assert ((s_B_greater_A = '1') and (s_B_equals_A = '0') and (s_B_less_A = '0'))        
-        -- If false, then report an error
-        report "Test failed for input combination: 1010, 0110" severity error;
-        
-        -- 10 test values
-        s_b <= "1011"; s_a <= "0101"; wait for 100 ns;        
-        -- Expected output
-        assert ((s_B_greater_A = '1') and (s_B_equals_A = '0') and (s_B_less_A = '0'))        
-        -- If false, then report an error
-        report "Test failed for input combination: 1011, 0101" severity error;
-        
-        -- 11 test values
-        s_b <= "1100"; s_a <= "0100"; wait for 100 ns;        
-        -- Expected output
-        assert ((s_B_greater_A = '1') and (s_B_equals_A = '0') and (s_B_less_A = '0'))        
-        -- If false, then report an error
-        report "Test failed for input combination: 1100, 0100" severity error;
-        
-        -- 12 test values
-        s_b <= "0000"; s_a <= "0000"; wait for 100 ns;        
-        -- Expected output
-        assert ((s_B_greater_A = '0') and (s_B_equals_A = '1') and (s_B_less_A = '0'))        
-        -- If false, then report an error
-        report "Test failed for input combination: 0000, 0000" severity error;
-        
-        -- 13 test values
-        s_b <= "1101"; s_a <= "0011"; wait for 100 ns;        
-        -- Expected output
-        assert ((s_B_greater_A = '1') and (s_B_equals_A = '0') and (s_B_less_A = '0'))        
-        -- If false, then report an error
-        report "Test failed for input combination: 0011, 0001" severity error;
-        
-        -- 14 test values
-        s_b <= "1110"; s_a <= "0010"; wait for 100 ns;        
-        -- Expected output
-        assert ((s_B_greater_A = '1') and (s_B_equals_A = '0') and (s_B_less_A = '0'))        
-        -- If false, then report an error
-        report "Test failed for input combination: 1110, 0010" severity error;
-        
-        -- 15 test values
-        s_b <= "1111"; s_a <= "0001"; wait for 100 ns;        
-        -- Expected output
-        assert ((s_B_greater_A = '1') and (s_B_equals_A = '0') and (s_B_less_A = '0'))        
-        -- If false, then report an error
-        report "Test failed for input combination: 1111, 0001" severity error;
-        
-
-
-
         -- Report a note at the end of stimulus process
         report "Stimulus process finished" severity note;
         wait;
     end process p_stimulus;
 
 end architecture testbench;
-
 ```
+
+### Screenshot with simulated time waveforms
+![ScreenShot](images/part2_1.png)
+
+### Used nexys-a7-50t inputs
+```vhdl
+##Switches
+set_property -dict { PACKAGE_PIN J15   IOSTANDARD LVCMOS33 } [get_ports { a_i[0] }]; #IO_L24N_T3_RS0_15 Sch=sw[0]
+set_property -dict { PACKAGE_PIN L16   IOSTANDARD LVCMOS33 } [get_ports { a_i[1] }]; #IO_L3N_T0_DQS_EMCCLK_14 Sch=sw[1]
+set_property -dict { PACKAGE_PIN M13   IOSTANDARD LVCMOS33 } [get_ports { b_i[0] }]; #IO_L6N_T0_D08_VREF_14 Sch=sw[2]
+set_property -dict { PACKAGE_PIN R15   IOSTANDARD LVCMOS33 } [get_ports { b_i[1] }]; #IO_L13N_T2_MRCC_14 Sch=sw[3]
+set_property -dict { PACKAGE_PIN R17   IOSTANDARD LVCMOS33 } [get_ports { c_i[0] }]; #IO_L12N_T1_MRCC_14 Sch=sw[4]
+set_property -dict { PACKAGE_PIN T18   IOSTANDARD LVCMOS33 } [get_ports { c_i[1] }]; #IO_L7N_T1_D10_14 Sch=sw[5]
+set_property -dict { PACKAGE_PIN U18   IOSTANDARD LVCMOS33 } [get_ports { d_i[0] }]; #IO_L17N_T2_A13_D29_14 Sch=sw[6]
+set_property -dict { PACKAGE_PIN R13   IOSTANDARD LVCMOS33 } [get_ports { d_i[1] }]; #IO_L5N_T0_D07_14 Sch=sw[7]
+
+set_property -dict { PACKAGE_PIN U11   IOSTANDARD LVCMOS33 } [get_ports { sel_i[0] }]; #IO_L19N_T3_A09_D25_VREF_14 Sch=sw[14]
+set_property -dict { PACKAGE_PIN V10   IOSTANDARD LVCMOS33 } [get_ports { sel_i[1] }]; #IO_L21P_T3_DQS_14 Sch=sw[15]
+
+## LEDs
+set_property -dict { PACKAGE_PIN H17   IOSTANDARD LVCMOS33 } [get_ports { f_o[0] }]; #IO_L18P_T2_A24_15 Sch=led[0]
+set_property -dict { PACKAGE_PIN K15   IOSTANDARD LVCMOS33 } [get_ports { f_o[1] }]; #IO_L24P_T3_RS1_15 Sch=led[1]
+```
+
+
+## Part 3: A 4-bit binary comparator
+### VHDL CODE design.vhd
 
 ### Console LOG
 ```bash
