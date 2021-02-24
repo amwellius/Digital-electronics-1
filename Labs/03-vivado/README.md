@@ -90,13 +90,13 @@ set_property -dict { PACKAGE_PIN K15   IOSTANDARD LVCMOS33 } [get_ports { f_o[1]
 ### Project Creation
 ![ScreenShot](images/part3_1.png)
 ### Adding source file
-![ScreenShot](images/part2_1.PNG)
+![ScreenShot](images/part3_2.PNG)
 ### Adding testbench file
-![ScreenShot](images/part2_1.PNG)
+![ScreenShot](images/part3_3.PNG)
 ### Running simulation
-![ScreenShot](images/part2_1.PNG)
+![ScreenShot](images/part3_4.PNG)
 ### Adding XDC file
-![ScreenShot](images/part2_1.PNG)
+![ScreenShot](images/part3_5.PNG)
 
 
 
