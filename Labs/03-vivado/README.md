@@ -36,7 +36,7 @@ end architecture Behavioral;
 
 ### Listing of VHDL stimulus process from testbench file tb_mux_2bit_4to1.vhd with syntax highlighting
 ### VHDL CODE
-```vhld
+```vhdl
  --------------------------------------------------------------------
     -- Data generation process
     --------------------------------------------------------------------
@@ -64,7 +64,7 @@ end architecture testbench;
 ```
 
 ### Screenshot with simulated time waveforms
-![ScreenShot](images/part2_1.png)
+![ScreenShot](images/part2_1.png)  
 
 ### Used nexys-a7-50t inputs
 ```vhdl
