@@ -19,3 +19,6 @@ launch_simulation
 launch_simulation
 source tb_mux_2bit_4to1.tcl
 close_sim
+launch_simulation
+source tb_mux_2bit_4to1.tcl
+close_sim
