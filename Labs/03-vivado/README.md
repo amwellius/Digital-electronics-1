@@ -64,7 +64,7 @@ end architecture testbench;
 ```
 
 ### Screenshot with simulated time waveforms
-![ScreenShot](images/part2_1.png)  
+![ScreenShot](images/part2_1.PNG)  
 
 ### Used nexys-a7-50t inputs
 ```vhdl
@@ -86,26 +86,17 @@ set_property -dict { PACKAGE_PIN H17   IOSTANDARD LVCMOS33 } [get_ports { f_o[0]
 set_property -dict { PACKAGE_PIN K15   IOSTANDARD LVCMOS33 } [get_ports { f_o[1] }]; #IO_L24P_T3_RS1_15 Sch=led[1]
 ```
 
-
-## Part 3: A 4-bit binary comparator
-### VHDL CODE design.vhd
-
-### Console LOG
-```bash
-[2021-02-17 12:23:54 EST] ghdl -i design.vhd testbench.vhd  && ghdl -m  tb_comparator_4bit && ghdl -r  tb_comparator_4bit   --vcd=dump.vcd && sed -i 's/^U/X/g; s/^-/X/g; s/^H/1/g; s/^L/0/g' dump.vcd 
-analyze design.vhd
-analyze testbench.vhd
-elaborate tb_comparator_4bit
-testbench.vhd:51:9:@0ms:(report note): Stimulus process started
-testbench.vhd:71:9:@300ns:(assertion error): Test failed for input combination: 0011, 1101
-testbench.vhd:173:9:@1600ns:(report note): Stimulus process finished
-Finding VCD file...
-./dump.vcd
-[2021-02-17 12:23:54 EST] Opening EPWave...
-Done
-```
+## Part 3: A Vivado tutorial
+### Project Creation
+![ScreenShot](images/part3_1.png)
+### Adding source file
+![ScreenShot](images/part2_1.PNG)
+### Adding testbench file
+![ScreenShot](images/part2_1.PNG)
+### Running simulation
+![ScreenShot](images/part2_1.PNG)
+### Adding XDC file
+![ScreenShot](images/part2_1.PNG)
 
 
-##### Link to EDA PlayGround
-[EDA PlayGroud](https://www.edaplayground.com/x/ptjA)
 
