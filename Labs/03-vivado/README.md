@@ -7,8 +7,12 @@
 
 ## Part 1: Preparation tasks
 ### Figure or table with connection of 16 slide switches and 16 LEDs on Nexys A7 board
-    Used Schema link:
-    [Link](https://reference.digilentinc.com/reference/programmable-logic/nexys-a7/reference-manual)
+   From switches 0-15 (SW0-SW0) we are using switches SW0-SW7 and SW14 and SW15
+   From LEDs 0-15 (LD0-LD15) we are using LEDs LD0 and LD1
+   Used Schema link:
+   [Link](https://reference.digilentinc.com/reference/programmable-logic/nexys-a7/reference-manual)
+####SCHEMA:
+![ScreenShot](images/part1_1.png)    
 
 
 ## Part 2: A 2-bit comparator
