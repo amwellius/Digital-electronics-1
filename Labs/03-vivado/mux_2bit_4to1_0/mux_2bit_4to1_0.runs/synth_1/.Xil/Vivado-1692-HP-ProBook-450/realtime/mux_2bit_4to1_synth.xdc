@@ -1,0 +1,1 @@
+set_property SRC_FILE_INFO {cfile:C:/Users/samin/Documents/GitHub/Digital-electronics-1/Labs/03-vivado/mux_2bit_4to1_0/mux_2bit_4to1_0.srcs/constrs_1/new/nexys-a7-50t.xdc rfile:../../../../../mux_2bit_4to1_0.srcs/constrs_1/new/nexys-a7-50t.xdc id:1} [current_design]

@@ -1,0 +1,7 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 0ca48405194a41498db29684df94af58 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_comparator_4bit_behav xil_defaultlib.tb_comparator_4bit -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-664] expression has 2 elements ; expected 4 [C:/Users/samin/Documents/GitHub/Digital-electronics-1/Labs/03-vivado/comparator/comparator.srcs/sim_1/new/tb_comparator_2bit.vhd:167]
+ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit tb_comparator_4bit in library work failed.
