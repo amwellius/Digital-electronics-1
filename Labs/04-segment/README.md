@@ -306,7 +306,7 @@ end Behavioral;
 
 
 ### Screenshot with simulated time waveforms; always display all inputs and outputs
-![ScreenShot](images/part3_1.png)
+![ScreenShot](images/part3_1.PNG)
 
 
 
