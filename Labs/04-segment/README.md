@@ -1,4 +1,4 @@
-# LAB 03-vivado
+# LAB 04-segment
 
 
 ### Link to GitHub repository
@@ -6,11 +6,26 @@
 
 
 ## Part 1: Preparation tasks
-### Figure or table with connection of 16 slide switches and 16 LEDs on Nexys A7 board
-   From switches 0-15 (SW0-SW0) we are using switches SW0-SW7 and SW14 and SW15 <br/>
-   From LEDs 0-15 (LD0-LD15) we are using LEDs LD0 and LD1 <br/>
-   Used Schema link: <br/>
-   (https://reference.digilentinc.com/reference/programmable-logic/nexys-a7/reference-manual) <br/>
+### Complete the decoder truth table for common anode 7-segment display.
+
+| **Hex** | **Inputs** | **A** | **B** | **C** | **D** | **E** | **F** | **G** |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| 0 | 0000 | 0 | 0 | 0 | 0 | 0 | 0 | 1 |
+| 1 | 0001 | 1 | 0 | 0 | 1 | 1 | 1 | 1 |
+| 2 | 0010 | 0 | 0 | 1 | 0 | 0 | 1 | 0 |
+| 3 | 0011 | 0 | 0 | 0 | 0 | 1 | 1 | 0 |
+| 4 | 0100 | 1 | 0 | 0 | 1 | 1 | 0 | 0 | 
+| 5 | 0101 | 0 | 1 | 0 | 0 | 1 | 0 | 0 |
+| 6 | 0110 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
+| 7 | 0111 | 0 | 0 | 0 | 1 | 1 | 1 | 1 |
+| 8 | 1000 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 9 | 1001 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| A | 1010 | 0 | 0 | 0 | 1 | 0 | 0 | 0 |
+| b | 1011 | 1 | 1 | 0 | 0 | 0 | 0 | 0 |
+| C | 1100 | 0 | 1 | 1 | 0 | 0 | 0 | 1 |
+| d | 1101 | 1 | 0 | 0 | 0 | 0 | 1 | 0 |
+| E | 1110 | 0 | 1 | 1 | 0 | 0 | 0 | 0 |
+| F | 1111 | 0 | 1 | 1 | 1 | 0 | 0 | 0 |
 #### SCHEMA: <br/>
 ![ScreenShot](images/part1_1.png)    
 
