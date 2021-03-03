@@ -14,3 +14,4 @@ open_project C:/Users/samin/Documents/GitHub/Digital-electronics-1/Labs/03-vivad
 update_compile_order -fileset sources_1
 launch_simulation
 source tb_mux_2bit_4to1.tcl
+close_sim
