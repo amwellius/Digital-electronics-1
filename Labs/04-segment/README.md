@@ -1,4 +1,4 @@
-# LAB 03-vivado
+# LAB 04-segment
 
 
 ### Link to GitHub repository
@@ -6,97 +6,140 @@
 
 
 ## Part 1: Preparation tasks
-### Figure or table with connection of 16 slide switches and 16 LEDs on Nexys A7 board
-   From switches 0-15 (SW0-SW0) we are using switches SW0-SW7 and SW14 and SW15 <br/>
-   From LEDs 0-15 (LD0-LD15) we are using LEDs LD0 and LD1 <br/>
+
+   From switches 0-15 (SW0-SW15) we are using switches SW0-SW4 <br/>
+   Also using 7-seg Display <br/>
    Used Schema link: <br/>
    (https://reference.digilentinc.com/reference/programmable-logic/nexys-a7/reference-manual) <br/>
+#### SCHEMA: <br/>
+![ScreenShot](images/part1_1.png)
+
+### Figure or table with connection of 7-segment displays on Nexys A7 board
+
+### Decoder truth table for common anode 7-segment display
+
+| **Hex** | **Inputs** | **A** | **B** | **C** | **D** | **E** | **F** | **G** |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| 0 | 0000 | 0 | 0 | 0 | 0 | 0 | 0 | 1 |
+| 1 | 0001 | 1 | 0 | 0 | 1 | 1 | 1 | 1 |
+| 2 | 0010 | 0 | 0 | 1 | 0 | 0 | 1 | 0 |
+| 3 | 0011 | 0 | 0 | 0 | 0 | 1 | 1 | 0 |
+| 4 | 0100 | 1 | 0 | 0 | 1 | 1 | 0 | 0 | 
+| 5 | 0101 | 0 | 1 | 0 | 0 | 1 | 0 | 0 |
+| 6 | 0110 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
+| 7 | 0111 | 0 | 0 | 0 | 1 | 1 | 1 | 1 |
+| 8 | 1000 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 9 | 1001 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| A | 1010 | 0 | 0 | 0 | 1 | 0 | 0 | 0 |
+| b | 1011 | 1 | 1 | 0 | 0 | 0 | 0 | 0 |
+| C | 1100 | 0 | 1 | 1 | 0 | 0 | 0 | 1 |
+| d | 1101 | 1 | 0 | 0 | 0 | 0 | 1 | 0 |
+| E | 1110 | 0 | 1 | 1 | 0 | 0 | 0 | 0 |
+| F | 1111 | 0 | 1 | 1 | 1 | 0 | 0 | 0 |
 #### SCHEMA: <br/>
 ![ScreenShot](images/part1_1.png)    
 
 
-## Part 2: Two-bit wide 4-to-1 multiplexer
-### Listing of VHDL architecture from source file mux_2bit_4to1.vhd with syntax highlighting
+## Part 2: Seven-segment display decoder
+### Listing of VHDL architecture from source file hex_7seg.vhd with syntax highlighting
 ### VHDL CODE 
 ```vhdl
-------------------------------------------------------------------------
--- Architecture body for mux_2bit_4to1 multiplexor
-------------------------------------------------------------------------
-architecture Behavioral of mux_2bit_4to1 is
-begin
-    
-    f_o <=  a_i when (sel_i = "00") else 
-            b_i when (sel_i = "01") else
-            c_i when (sel_i = "10") else
-            d_i;     
-
-
-end architecture Behavioral;
+architecture behavioral of hex_7seg is               
+begin                                                
+                                                     
+    -------------------------------------------------
+    -- p_7seg_decoder:                               
+    -- A combinational process for 7-segment display 
+    -- Any time "hex_i" is changed, the process is "e
+    -- Output pin seg_o(6) corresponds to segment A, 
+    -------------------------------------------------
+    p_7seg_decoder : process(hex_i)                  
+    begin                                            
+        case hex_i is                                
+            when "0000" =>                           
+                seg_o <= "0000001";            -- 0  
+            when "0001" =>                           
+                seg_o <= "1001111";            -- 1  
+            when "0010" =>                           
+                seg_o <= "0010010";            -- 2  
+            when "0011" =>                           
+                seg_o <= "0000110";            -- 3  
+            when "0100" =>                           
+                seg_o <= "1001100";            -- 4  
+            when "0101" =>                           
+                seg_o <= "0100100";            -- 5  
+            when "0110" =>                           
+                seg_o <= "0100000";            -- 6  
+            when "0111" =>                           
+                seg_o <= "0001111";            -- 7  
+            when "1000" =>                           
+                seg_o <= "0000000";            -- 8  
+            when "1001" =>                           
+                seg_o <= "0000100";            -- 9  
+            when "1010" =>                           
+                seg_o <= "0001000";            -- A  
+            when "1011" =>                           
+                seg_o <= "1100000";            -- B  
+            when "1100" =>                           
+                seg_o <= "0110001";            -- C  
+            when "1101" =>                           
+                seg_o <= "1000010";            -- D  
+            when "1110" =>                           
+                seg_o <= "0110000";            -- E  
+            when others =>                           
+                seg_o <= "0111000";            -- F  
+        end case;                                    
+    end process p_7seg_decoder;                      
+                                                     
+end architecture behavioral;                         
 ```
 
-### Listing of VHDL stimulus process from testbench file tb_mux_2bit_4to1.vhd with syntax highlighting
+### Listing of VHDL stimulus process from testbench file tb_hex_7seg.vhd with syntax highlighting
 ### VHDL CODE
 ```vhdl
- --------------------------------------------------------------------
-    -- Data generation process
-    --------------------------------------------------------------------
-    p_stimulus : process
+p_stimulus : process
     begin
-        -- Report a note at the begining of stimulus process
         report "Stimulus process started" severity note;
-
-       s_a <= "00";
-       s_b <= "01";
-       s_c <= "10";
-       s_d <= "11";
-       
-       s_sel <= "00"; wait for 100ns;
-       s_sel <= "01"; wait for 100ns;
-       s_sel <= "10"; wait for 100ns;
-       s_sel <= "11"; wait for 100ns;
         
-        -- Report a note at the end of stimulus process
+        s_hex <= "0000";    wait for 10 ns;       -- 0
+        s_hex <= "0001";    wait for 10 ns;       -- 1
+        s_hex <= "0010";    wait for 10 ns;       -- 2
+        s_hex <= "0011";    wait for 10 ns;       -- 3
+        s_hex <= "0100";    wait for 10 ns;       -- 4
+        s_hex <= "0101";    wait for 10 ns;       -- 5
+        s_hex <= "0110";    wait for 10 ns;       -- 6
+        s_hex <= "0111";    wait for 10 ns;       -- 7
+        s_hex <= "1000";    wait for 10 ns;       -- 8
+        s_hex <= "1001";    wait for 10 ns;       -- 9
+        s_hex <= "1010";    wait for 10 ns;       -- A
+        s_hex <= "1011";    wait for 10 ns;       -- B
+        s_hex <= "1100";    wait for 10 ns;       -- C
+        s_hex <= "1101";    wait for 10 ns;       -- D
+        s_hex <= "1110";    wait for 10 ns;       -- E
+        s_hex <= "1111";    wait for 10 ns;       -- F
+        
+    
+    
         report "Stimulus process finished" severity note;
         wait;
     end process p_stimulus;
 
-end architecture testbench;
 ```
 
-### Screenshot with simulated time waveforms
+### Screenshot with simulated time waveforms; always display all inputs and outputs
 ![ScreenShot](images/part2_1.PNG)  
 
-### Used nexys-a7-50t inputs
+### Listing of VHDL code from source file top.vhd with 7-segment module instantiation
 ```vhdl
-##Switches
-set_property -dict { PACKAGE_PIN J15   IOSTANDARD LVCMOS33 } [get_ports { a_i[0] }]; #IO_L24N_T3_RS0_15 Sch=sw[0]
-set_property -dict { PACKAGE_PIN L16   IOSTANDARD LVCMOS33 } [get_ports { a_i[1] }]; #IO_L3N_T0_DQS_EMCCLK_14 Sch=sw[1]
-set_property -dict { PACKAGE_PIN M13   IOSTANDARD LVCMOS33 } [get_ports { b_i[0] }]; #IO_L6N_T0_D08_VREF_14 Sch=sw[2]
-set_property -dict { PACKAGE_PIN R15   IOSTANDARD LVCMOS33 } [get_ports { b_i[1] }]; #IO_L13N_T2_MRCC_14 Sch=sw[3]
-set_property -dict { PACKAGE_PIN R17   IOSTANDARD LVCMOS33 } [get_ports { c_i[0] }]; #IO_L12N_T1_MRCC_14 Sch=sw[4]
-set_property -dict { PACKAGE_PIN T18   IOSTANDARD LVCMOS33 } [get_ports { c_i[1] }]; #IO_L7N_T1_D10_14 Sch=sw[5]
-set_property -dict { PACKAGE_PIN U18   IOSTANDARD LVCMOS33 } [get_ports { d_i[0] }]; #IO_L17N_T2_A13_D29_14 Sch=sw[6]
-set_property -dict { PACKAGE_PIN R13   IOSTANDARD LVCMOS33 } [get_ports { d_i[1] }]; #IO_L5N_T0_D07_14 Sch=sw[7]
 
-set_property -dict { PACKAGE_PIN U11   IOSTANDARD LVCMOS33 } [get_ports { sel_i[0] }]; #IO_L19N_T3_A09_D25_VREF_14 Sch=sw[14]
-set_property -dict { PACKAGE_PIN V10   IOSTANDARD LVCMOS33 } [get_ports { sel_i[1] }]; #IO_L21P_T3_DQS_14 Sch=sw[15]
-
-## LEDs
-set_property -dict { PACKAGE_PIN H17   IOSTANDARD LVCMOS33 } [get_ports { f_o[0] }]; #IO_L18P_T2_A24_15 Sch=led[0]
-set_property -dict { PACKAGE_PIN K15   IOSTANDARD LVCMOS33 } [get_ports { f_o[1] }]; #IO_L24P_T3_RS1_15 Sch=led[1]
 ```
 
-## Part 3: A Vivado tutorial
-### Project Creation
-![ScreenShot](images/part3_1.png)
-### Adding source file
+## Part 3: LED(7:4) indicators
+### LED(7:4) indicators
+
+### Screenshot with simulated time waveforms; always display all inputs and outputs
 ![ScreenShot](images/part3_2.png)
-### Adding testbench file
-![ScreenShot](images/part3_3.png)
-### Running simulation
-![ScreenShot](images/part3_4.png)
-### Adding XDC file
-![ScreenShot](images/part3_5.png)
+
 
 
 
