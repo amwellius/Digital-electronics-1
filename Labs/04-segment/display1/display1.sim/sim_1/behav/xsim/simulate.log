@@ -1,0 +1,6 @@
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_top/p_stimulus  File: C:/Users/samin/Documents/GitHub/Digital-electronics-1/Labs/04-segment/display1/display1.srcs/sim_1/new/tb_top.vhd
+Note: Stimulus process finished
+Time: 160 ns  Iteration: 0  Process: /tb_top/p_stimulus  File: C:/Users/samin/Documents/GitHub/Digital-electronics-1/Labs/04-segment/display1/display1.srcs/sim_1/new/tb_top.vhd
