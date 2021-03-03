@@ -9,7 +9,7 @@
 
 ### Figure or table with connection of 7-segment displays on Nexys A7 board
    From switches 0-15 (SW0-SW15) we are using switches SW0-SW4 <br/>
-   Also using 7-seg Display <br/>
+   Also using 7-seg Display and LED[0]-LED[7] <br/>
    Used Schema link: <br/>
    (https://reference.digilentinc.com/reference/programmable-logic/nexys-a7/reference-manual) <br/>
    
