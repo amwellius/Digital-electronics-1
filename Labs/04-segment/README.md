@@ -7,14 +7,14 @@
 
 ## Part 1: Preparation tasks
 
+### Figure or table with connection of 7-segment displays on Nexys A7 board
    From switches 0-15 (SW0-SW15) we are using switches SW0-SW4 <br/>
    Also using 7-seg Display <br/>
    Used Schema link: <br/>
    (https://reference.digilentinc.com/reference/programmable-logic/nexys-a7/reference-manual) <br/>
+   
 #### SCHEMA: <br/>
 ![ScreenShot](images/part1_1.png)
-
-### Figure or table with connection of 7-segment displays on Nexys A7 board
 
 ### Decoder truth table for common anode 7-segment display
 
@@ -36,8 +36,7 @@
 | d | 1101 | 1 | 0 | 0 | 0 | 0 | 1 | 0 |
 | E | 1110 | 0 | 1 | 1 | 0 | 0 | 0 | 0 |
 | F | 1111 | 0 | 1 | 1 | 1 | 0 | 0 | 0 |
-#### SCHEMA: <br/>
-![ScreenShot](images/part1_1.png)    
+    
 
 
 ## Part 2: Seven-segment display decoder
