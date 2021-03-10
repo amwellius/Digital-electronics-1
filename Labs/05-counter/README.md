@@ -8,9 +8,11 @@
 ## Part 1: Preparation tasks
 
 ### Figure or table with connection of push buttons on Nexys A7 board
-
-   From switches 0-15 (SW0-SW15) we are using switches SW0-SW4 <br/>
-   Also using 7-seg Display and LED[0]-LED[7] <br/>
+   Using:         <br/>
+   SW0-SW4        <br/>
+   7-seg Display  <br/>
+   LED[0]-LED[7]  <br/>
+   Buttons BTNL, BTNR, BTNU, BTND, BTNC
    Used Schema link: <br/>
    (https://reference.digilentinc.com/reference/programmable-logic/nexys-a7/reference-manual) <br/>
    
