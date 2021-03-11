@@ -32,11 +32,14 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity top is
+    
     Port ( 
      CLK100MHZ :    in STD_LOGIC;
      BTNC :         in STD_LOGIC;
-     SW :           in STD_LOGIC_VECTOR (1 - 1 downto 0);
-     LED :          out STD_LOGIC_VECTOR (4 - 1  downto 0);
+     BTNL :         in STD_LOGIC;
+     BTNR :         in STD_LOGIC;
+     SW :           in STD_LOGIC_VECTOR (2 - 1 downto 0);
+     LED :          out STD_LOGIC_VECTOR (16 - 1  downto 0);
      CA :           out STD_LOGIC;
      CB :           out STD_LOGIC;
      CC :           out STD_LOGIC;
@@ -44,7 +47,8 @@ entity top is
      CE :           out STD_LOGIC;
      CF :           out STD_LOGIC;
      CG :           out STD_LOGIC;
-     AN :           out STD_LOGIC_VECTOR (8 - 1  downto 0));
+     AN :           out STD_LOGIC_VECTOR (8 - 1  downto 0)
+     );
      
 end top;
 
@@ -57,14 +61,18 @@ architecture Behavioral of top is
     signal s_en  : std_logic;
     -- Internal counter
     signal s_cnt : std_logic_vector(4 - 1 downto 0);
+    -- Internal clock enable
+    signal s_en16  : std_logic;
+    -- Internal counter
+    signal s_cnt16 : std_logic_vector(16 - 1 downto 0);
 
 begin
 
     --------------------------------------------------------------------
     -- Instance (copy) of clock_enable entity
-    clk_en0 : entity work.clock_enable
+    CLOCK4_250ms : entity work.clock_enable
         generic map(
-            g_MAX   => 100000000
+            g_MAX   => 250000000
         )
         port map(
              clk    =>  CLK100MHZ,
@@ -74,24 +82,49 @@ begin
 
     --------------------------------------------------------------------
     -- Instance (copy) of cnt_up_down entity
-    bin_cnt0 : entity work.cnt_up_down
+    Counter_4BIT : entity work.cnt_up_down
         generic map(
             g_CNT_WIDTH =>  4
         )
         port map(
             clk         => CLK100MHZ,  
-            reset       => BTNC,
+            reset       => BTNL,
             en_i        => s_en,    
             cnt_up_i    => SW(0),
             cnt_o       => s_cnt
         );
+--------------------------------------------------------------------
+    -- Instance (copy) of clock_enable entity           16BIT COunter
+    CLOCK16_4ms : entity work.clock_enable
+        generic map(
+                g_MAX   => 400000
+        )
+        port map(
+             clk    =>  CLK100MHZ,
+             reset  =>  BTNC,
+             ce_o   =>  s_en16
+        );
 
+    --------------------------------------------------------------------
+      --------------------------------------------------------------------
+    -- Instance (copy) of cnt_up_down entity
+    Counter_16_BIT : entity work.cnt_up_down
+        generic map(
+            g_CNT_WIDTH =>  16
+        )
+        port map(
+            clk         => CLK100MHZ,  
+            reset       => BTNR,
+            en_i        => s_en16,    
+            cnt_up_i    => SW(1),
+            cnt_o       => s_cnt16
+        );
     -- Display input value on LEDs
-    LED(3 downto 0) <= s_cnt;
+    LED(16 - 1 downto 0) <= s_cnt16;
 
     --------------------------------------------------------------------
     -- Instance (copy) of hex_7seg entity
-    hex2seg : entity work.hex_7seg
+    hex7seg : entity work.hex_7seg
         port map(
             hex_i    => s_cnt,
             seg_o(6) => CA,
