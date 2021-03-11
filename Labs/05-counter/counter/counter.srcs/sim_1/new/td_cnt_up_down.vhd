@@ -94,7 +94,6 @@ begin
         wait for 380 ns;
         s_cnt_up <= '0';
         wait for 220 ns;
-
         -- Disable counting
         s_en     <= '0';
 
