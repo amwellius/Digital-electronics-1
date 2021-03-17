@@ -12,7 +12,7 @@
    SW0-SW4        <br/>
    7-seg Display  <br/>
    LED[0]-LED[7]  <br/>
-   Buttons BTNL, BTNR, BTNU, BTND, BTNC
+   Buttons BTNL, BTNR, BTNU, BTND, BTNC   <br/>
    Used Schema link: <br/>
    (https://reference.digilentinc.com/reference/programmable-logic/nexys-a7/reference-manual) <br/>
    
