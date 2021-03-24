@@ -12,28 +12,37 @@
  
    | **D** | **Qn** | **Q(n+1)** | **Comments** |
    | :-: | :-: | :-: | :-- |
-   | 0 | 0 |  |  |
-   | 0 | 1 |  |  |
-   | 1 |  |  |  |
-   | 1 |  |  |  |
+   | 0 | 0 | 0 | No change |
+   | 0 | 1 | 0 | Change |
+   | 1 | 1 | 0 | No change |
+   | 1 | 0 | 0 | Change |
+   
+   ##### EQ
+   ![ScreenShot](images/d_code.png)
 
    | **J** | **K** | **Qn** | **Q(n+1)** | **Comments** |
    | :-: | :-: | :-: | :-: | :-- |
    | 0 | 0 | 0 | 0 | No change |
    | 0 | 0 | 1 | 1 | No change |
-   | 0 |  |  |  |  |
-   | 0 |  |  |  |  |
-   | 1 |  |  |  |  |
-   | 1 |  |  |  |  |
-   | 1 |  |  |  |  |
-   | 1 |  |  |  |  |
+   | 0 | 1 | 0 | 0 | Reset |
+   | 0 | 1 | 1 | 0 | Reset |
+   | 1 | 0 | 0 | 1 | Set |
+   | 1 | 0 | 1 | 1 | Set |
+   | 1 | 1 | 0 | 1 | Toogle (invert) |
+   | 1 | 1 | 1 | 0 | Toogle (invert) |
+   
+   ##### EQ
+   ![ScreenShot](images/jk_code.png)
 
    | **T** | **Qn** | **Q(n+1)** | **Comments** |
    | :-: | :-: | :-: | :-- |
-   | 0 | 0 |  |  |
-   | 0 | 1 |  |  |
-   | 1 |  |  |  |
-   | 1 |  |  |  |
+   | 0 | 0 | 0 | No change |
+   | 0 | 1 | 1 | No change |
+   | 1 | 0 | 1 | Invert |
+   | 1 | 1 | 0 | Invert |
+   
+   ##### EQ
+   ![ScreenShot](images/t_code.png)
    
 #### Signals: <br/>
 ![ScreenShot](images/1_1.png)
