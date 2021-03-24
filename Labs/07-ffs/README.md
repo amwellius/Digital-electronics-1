@@ -8,6 +8,7 @@
 ## Part 1: Preparation tasks
 
 ### Characteristic equations and completed tables for D, JK, T flip-flops
+#### Equations done using: https://www.codecogs.com/latex/eqneditor.php
 #### Tables
  
    | **D** | **Qn** | **Q(n+1)** | **Comments** |
@@ -18,7 +19,7 @@
    | 1 | 0 | 0 | Change |
    
    ##### EQ
-   ![ScreenShot](images/d_code.png)
+   ![ScreenShot](images/d_code.PNG)
 
    | **J** | **K** | **Qn** | **Q(n+1)** | **Comments** |
    | :-: | :-: | :-: | :-: | :-- |
@@ -32,7 +33,7 @@
    | 1 | 1 | 1 | 0 | Toogle (invert) |
    
    ##### EQ
-   ![ScreenShot](images/jk_code.png)
+   ![ScreenShot](images/jk_code.PNG)
 
    | **T** | **Qn** | **Q(n+1)** | **Comments** |
    | :-: | :-: | :-: | :-- |
@@ -42,12 +43,8 @@
    | 1 | 1 | 0 | Invert |
    
    ##### EQ
-   ![ScreenShot](images/t_code.png)
-   
-#### Signals: <br/>
-![ScreenShot](images/1_1.png)
-#### Used Schema: <br/>
-![ScreenShot](images/1_2.png)
+   ![ScreenShot](images/t_code.PNG)
+
 
 ## Part 2: D latch
 ### VHDL code listing of the process p_d_latch with syntax highlighting
