@@ -44,11 +44,7 @@
    
    ##### EQ
    ![ScreenShot](images/t_code.PNG)
-   
-#### Signals: <br/>
-![ScreenShot](images/1_1.PNG)
-#### Used Schema: <br/>
-![ScreenShot](images/1_2.PNG)
+
 
 ## Part 2: D latch
 ### VHDL code listing of the process p_d_latch with syntax highlighting
