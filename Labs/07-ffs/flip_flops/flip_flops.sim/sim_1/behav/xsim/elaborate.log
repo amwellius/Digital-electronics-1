@@ -1,6 +1,6 @@
 Vivado Simulator 2020.2
 Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 172cc6a1cabc4e10a0718c200898472b --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_jk_ff_rst_behav xil_defaultlib.tb_jk_ff_rst -log elaborate.log 
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 172cc6a1cabc4e10a0718c200898472b --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_d_latch_behav xil_defaultlib.tb_d_latch -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -10,6 +10,6 @@ Time Resolution for simulation is 1ps
 Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
-Compiling architecture behavioral of entity xil_defaultlib.jk_ff_rst [jk_ff_rst_default]
-Compiling architecture behavioral of entity xil_defaultlib.tb_jk_ff_rst
-Built simulation snapshot tb_jk_ff_rst_behav
+Compiling architecture behavioral of entity xil_defaultlib.d_latch [d_latch_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_d_latch
+Built simulation snapshot tb_d_latch_behav

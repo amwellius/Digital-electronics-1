@@ -37,11 +37,11 @@ end tb_d_latch;
 
 architecture Behavioral of tb_d_latch is
 
-     signal s_en :   std_logic;
-    signal s_arst : std_logic;
-    signal s_d :    std_logic;
-    signal s_q :    std_logic;
-    signal s_q_bar :std_logic;
+    signal s_en     : std_logic;
+    signal s_arst   : std_logic;
+    signal s_d      : std_logic;
+    signal s_q      : std_logic;
+    signal s_q_bar  : std_logic;
 
 begin
     uut_d_latch : entity work.d_latch
@@ -53,28 +53,21 @@ begin
         q_bar   => s_q_bar
         
     );
-
-
-
-
     --------------------------------------------------------------------
     -- Reset generation process
     --------------------------------------------------------------------
     p_reset_gen : process 
     begin
         s_arst <= '0';
-        wait for 53 ns;
-        
-        -- Reset activated
-        s_arst <= '1';
-        wait for 5 ns;
+        wait for 50 ns;        
 
-        -- Reset deactivated
+        s_arst <= '1';
+        wait for 10 ns;
+
         s_arst <= '0';
-        wait for 108 ns;
+        wait for 109 ns;
+        s_arst <= '1';   
         
-        
-            
         wait;
     end process p_reset_gen;
 
@@ -84,19 +77,49 @@ begin
     p_stimulus : process
     begin
         report "Stimulus process started" severity note;
+        s_en    <= '0';
+        s_d     <= '0';
+
+
+        wait for 10 ns; s_d <= '1';
+        wait for 10 ns; s_d <= '0';
+        wait for 10 ns; s_d <= '1';
+        wait for 10 ns; s_d <= '0';
+        wait for 10 ns; s_d <= '1';
+        wait for 10 ns; s_d <= '0';
+        wait for 10 ns;
+
+        s_en <= '1'; wait for 5 ns;
+        assert(s_q = '0' and s_q_bar = '1') --ak to neni nula vypise sa to co je v tom reporte
+        report " s_q and q_bar expected 01" severity error;
+        
+        s_d <= '1';
+        wait for 10 ns; s_d <= '0';
+        wait for 10 ns; s_d <= '0';
+        wait for 10 ns; s_d <= '0';
+        wait for 10 ns; s_d <= '1';
+        wait for 10 ns; s_d <= '1';
+        wait for 10 ns; s_d <= '0';
+        
         s_en <= '0';
-        wait for 10 ns;
-    --    
-        s_en <= '1';
-        wait for 50 ns;
-        assert(s_q = '0' and s_q_bar = '1') --ak to neni nula vypise sa to co je v tom reporte
-        report "kombinacia vzstupov " severity error;
-     --   
-     
-        s_en <= '1';
-        wait for 10 ns;
-        assert(s_q = '0' and s_q_bar = '1') --ak to neni nula vypise sa to co je v tom reporte
-        report "kombinacia vzstupov " severity error;
+        s_arst <= '1'; wait for 10 ns;
+        assert(s_q = '0' and s_q_bar = '1') 
+        report " asrt expected 1" severity error;
+        
+        wait for 10 ns; s_d <= '1';
+        wait for 10 ns; s_d <= '0';
+        wait for 10 ns; s_d <= '1';
+        wait for 10 ns; s_d <= '0';
+        wait for 10 ns; s_d <= '1';
+        wait for 10 ns; s_d <= '0';
+        wait for 10 ns; s_d <= '0';
+        
+        s_arst <= '0'; wait for 10 ns;
+        
+        s_en <= '1'; wait for 10 ns;
+        assert(s_q = '0' and s_q_bar = '1') 
+        report " asrt expected 1" severity error;
+
      
      
      
