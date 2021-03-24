@@ -1,4 +1,4 @@
-# LAB 06-display_driver
+# LAB 07-ffs
 
 
 ### Link to GitHub repository
