@@ -59,7 +59,7 @@ uut_t_ff_rst : entity work.t_ff_rst
         
     );
     
-      p_clk_gen : process
+    p_clk_gen : process
     begin
         while now < 750 ns loop         -- 75 periods of 100MHz clock
             s_clk_100MHz <= '0';
