@@ -59,7 +59,7 @@ begin
     p_reset_gen : process 
     begin
         s_arst <= '0';
-        wait for 50 ns;        
+        wait for 20 ns;        
 
         s_arst <= '1';
         wait for 10 ns;
@@ -79,6 +79,7 @@ begin
         report "Stimulus process started" severity note;
         s_en    <= '0';
         s_d     <= '0';
+        --s_arst  <= '0';
 
 
         wait for 10 ns; s_d <= '1';
@@ -87,7 +88,7 @@ begin
         wait for 10 ns; s_d <= '0';
         wait for 10 ns; s_d <= '1';
         wait for 10 ns; s_d <= '0';
-        wait for 10 ns;
+        wait for 8 ns;
 
         s_en <= '1'; wait for 5 ns;
         assert(s_q = '0' and s_q_bar = '1') --ak to neni nula vypise sa to co je v tom reporte
@@ -99,11 +100,11 @@ begin
         wait for 10 ns; s_d <= '0';
         wait for 10 ns; s_d <= '1';
         wait for 10 ns; s_d <= '1';
-        wait for 10 ns; s_d <= '0';
+        wait for 4 ns; s_d <= '1';
         
-        s_en <= '0';
-        s_arst <= '1'; wait for 10 ns;
-        assert(s_q = '0' and s_q_bar = '1') 
+        s_en <= '0'; wait for 3 ns;
+       -- s_arst <= '1'; wait for 10 ns;
+        assert(s_q = '1' and s_q_bar = '0') 
         report " asrt expected 1" severity error;
         
         wait for 10 ns; s_d <= '1';
@@ -114,7 +115,7 @@ begin
         wait for 10 ns; s_d <= '0';
         wait for 10 ns; s_d <= '0';
         
-        s_arst <= '0'; wait for 10 ns;
+        --s_arst <= '0'; wait for 10 ns;
         
         s_en <= '1'; wait for 10 ns;
         assert(s_q = '0' and s_q_bar = '1') 

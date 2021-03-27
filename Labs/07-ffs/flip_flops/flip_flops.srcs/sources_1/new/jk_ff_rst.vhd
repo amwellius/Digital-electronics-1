@@ -49,7 +49,7 @@ begin
                                      
      if rising_edge(clk) then  
           if (rst = '1') then
-            s_q <= '0';
+              s_q <= '0';
           else
             if (j = '0' and k = '0') then
                 s_q <= s_q;

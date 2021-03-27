@@ -39,7 +39,10 @@ end tb_d_ff_arst;
 
 architecture Behavioral of tb_d_ff_arst is
 
-     signal s_clk :   std_logic;
+    constant c_CLK_100MHZ_PERIOD : time    := 10 ns;
+
+    
+    signal s_clk_100MHz :   std_logic;
     signal s_arst : std_logic;
     signal s_d :    std_logic;
     signal s_q :    std_logic;
@@ -47,7 +50,7 @@ architecture Behavioral of tb_d_ff_arst is
 begin
 uut_d_ff_arst : entity work.d_ff_arst
     port map(
-        clk      => s_clk,
+        clk      => s_clk_100MHz,
         arst    => s_arst,
         d       => s_d,
         q       => s_q,
@@ -72,7 +75,7 @@ uut_d_ff_arst : entity work.d_ff_arst
     p_reset_gen : process 
     begin
         s_arst <= '0';
-        wait for 53 ns;
+        wait for 58 ns;
         
         -- Reset activated
         s_arst <= '1';
@@ -80,10 +83,7 @@ uut_d_ff_arst : entity work.d_ff_arst
 
         -- Reset deactivated
         s_arst <= '0';
-        wait for 108 ns;
-        
-        
-            
+                
         wait;
     end process p_reset_gen;
     
@@ -93,25 +93,33 @@ uut_d_ff_arst : entity work.d_ff_arst
     p_stimulus : process
     begin
         report "Stimulus process started" severity note;
-        s_en <= '0';
-        wait for 10 ns;
-    --    
-        s_en <= '1';
-        wait for 50 ns;
-        assert(s_q = '0' and s_q_bar = '1') --ak to neni nula vypise sa to co je v tom reporte
-        report "kombinacia vzstupov " severity error;
-     --   
-     
-        s_en <= '1';
-        wait for 10 ns;
-        assert(s_q = '0' and s_q_bar = '1') --ak to neni nula vypise sa to co je v tom reporte
-        report "kombinacia vzstupov " severity error;
-     
-     
-     
-     
-        report "Stimulus process finished" severity note;
         
+        wait for 13 ns; s_d <= '1';
+        assert(s_q = '0' and s_q_bar = '1') 
+        report " Error, s_q / s_q_bar not as expected" severity error;
+        
+        wait for 10 ns; s_d <= '0';
+        assert(s_q = '0' and s_q_bar = '1') 
+        report " Error, s_q / s_q_bar not as expected" severity error;
+        
+        wait for 10 ns; s_d <= '1';
+        wait for 10 ns; s_d <= '0';
+        wait for 10 ns; s_d <= '1';
+        assert(s_q = '0' and s_q_bar = '1') 
+        report " Error, s_q / s_q_bar not as expected" severity error;
+        
+        wait for 10 ns; s_d <= '0';
+        wait for 10 ns; s_d <= '0';
+        assert(s_q = '1' and s_q_bar = '0') 
+        report " Error, s_q / s_q_bar not as expected" severity error;
+        
+        wait for 10 ns; s_d <= '1';
+        wait for 10 ns; s_d <= '1';
+        wait for 10 ns; s_d <= '0';
+        wait for 10 ns; s_d <= '1';
+        wait for 10 ns; s_d <= '0';
+ 
+        report "Stimulus process finished" severity note;        
         wait;
     end process p_stimulus;
 
