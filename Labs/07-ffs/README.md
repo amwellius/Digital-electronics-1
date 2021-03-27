@@ -8,7 +8,7 @@
 ## Part 1: Preparation tasks
 
 ### Characteristic equations and completed tables for D, JK, T flip-flops
-#### Equations done using: https://www.codecogs.com/latex/eqneditor.php
+#### Equations made using: https://www.codecogs.com/latex/eqneditor.php
 #### Tables
  
    | **D** | **Qn** | **Q(n+1)** | **Comments** |
