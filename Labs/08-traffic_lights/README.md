@@ -30,6 +30,10 @@ Using:
 
 
 ## Part 2: Traffic light controller
+
+### State diagram
+ ![ScreenShot](images/2_0.PNG)
+ 
 ### Listing of VHDL code of sequential process 'p_traffic_fsm' with syntax highlighting
 ### VHDL CODE 
 ```vhdl
