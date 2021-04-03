@@ -165,6 +165,7 @@ Using:
 | `SOUTH_WAIT` | yellow | red | 2 sec | =>`STOP1` |
 
 ### State diagram
+![ScreenShot](images/3_1.PNG)
 
 ### Listing of VHDL code of sequential process `p_smart_traffic_fsm` with syntax highlighting
 ### VHDL CODE 
