@@ -155,16 +155,15 @@ Using:
 
 ## Part 3: Smart controller
 ### State table
-| **Current state** | **Direction South** | **Direction West** | **Delay** |
-| :-- | :-: | :-: | :-: |
-| `STOP1`      | red    | red | 1 sec |
-| `WEST_GO`    | red    | green | 4 sec |
-| `WEST_WAIT`  | red    | yellow | 2 sec |
-| `STOP2`      | red    | red | 1 sec |
-| `SOUTH_GO`   | green  | red | 4 sec |
-| `SOUTH_WAIT` | yellow | red | 2 sec |
-| `x` | y | z | q sec |
-| `x` | y | z | q sec |
+| **Current state** | **Direction South** | **Direction West** | **Delay** | **CAR sensor WEST/SOUTH** |
+| :-- | :-: | :-: | :-: | :-: |
+| `STOP1`      | red    | red | 1 sec | =>WEST_GO |
+| `WEST_GO`    | red    | green | 4 sec | 10 =>WEST_GO;  01=>STOP2; 00 =>STOP1 |
+| `WEST_WAIT`  | red    | yellow | 2 sec | =>STOP2 |
+| `STOP2`      | red    | red | 1 sec | =>SOUTH_GO |
+| `SOUTH_GO`   | green  | red | 4 sec | 01 =>SOUTH_GO;  10=>STOP1; 00 =>STOP1 |
+| `SOUTH_WAIT` | yellow | red | 2 sec | =>STOP1 |
+
 ### State diagram
 
 ### Listing of VHDL code of sequential process 'p_smart_traffic_fsm' with syntax highlighting
