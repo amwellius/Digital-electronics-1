@@ -157,12 +157,12 @@ Using:
 ### State table
 | **Current state** | **Direction South** | **Direction West** | **Delay** | **CAR sensor WEST/SOUTH** |
 | :-- | :-: | :-: | :-: | :-: |
-| `STOP1`      | red    | red | 1 sec | =>WEST_GO |
-| `WEST_GO`    | red    | green | 4 sec | 10 =>WEST_GO;  01=>STOP2; 00 =>STOP1 |
-| `WEST_WAIT`  | red    | yellow | 2 sec | =>STOP2 |
-| `STOP2`      | red    | red | 1 sec | =>SOUTH_GO |
-| `SOUTH_GO`   | green  | red | 4 sec | 01 =>SOUTH_GO;  10=>STOP1; 00 =>STOP1 |
-| `SOUTH_WAIT` | yellow | red | 2 sec | =>STOP1 |
+| `STOP1`      | red    | red | 1 sec | =>`WEST_GO` |
+| `WEST_GO`    | red    | green | 4 sec | `10`=>`WEST_GO`;  `01`=>`STOP2`; `00`=>`STOP1` |
+| `WEST_WAIT`  | red    | yellow | 2 sec | =>`STOP2` |
+| `STOP2`      | red    | red | 1 sec | =>`SOUTH_GO` |
+| `SOUTH_GO`   | green  | red | 4 sec | `01`=>`SOUTH_GO`;  `10`=>`STOP1`; `00`=>`STOP1` |
+| `SOUTH_WAIT` | yellow | red | 2 sec | =>`STOP1` |
 
 ### State diagram
 
