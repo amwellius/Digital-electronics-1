@@ -9,7 +9,7 @@ xxx[Link to GitHub project folder]( http://github.com/xxx) <br/>
 Tomáš Kříčka 22xxxx <br/> 
 xxx[Link to GitHub project folder]( http://github.com/xxx) <br/> 
 Samuel Košík 221056 <br/>
-xxx[Link to GitHub project folder]( http://github.com/xxx)
+xxx[Link to GitHub project folder]( https://github.com/amwellius/Digital-electronics-1/tree/main/Labs/project)
 
 ### Project objectives
 
