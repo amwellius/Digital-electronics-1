@@ -23,7 +23,7 @@ Write your text here.
 
 ## VHDL modules description and simulations
 
-### (last one). 7 Segment Driver Module
+### (last one). 7 Segment Driver Module <br/>
    This block consists of 4 smaller modules: `CLOCK`, `UP_DOWN_COUNTER`, `DRIVER_4X7SEG`, `DECODER_7SEG` <br/>
 #### `CLOCK`:
    Generates 100MHz clock. This periodic signal is used in module `UP_DOWN_COUNTER`, which reacts on rising edge of the signal. <br/>
