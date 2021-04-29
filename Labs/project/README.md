@@ -23,7 +23,7 @@ Write your text here.
 
 ## VHDL modules description and simulations
 
-   ### (last one). 7 Segment Driver Module <br/>
+### (last one). 7 Segment Driver Module <br/>
    This block consists of 4 smaller modules: `CLOCK`, `UP_DOWN_COUNTER`, `DRIVER_4X7SEG`, `DECODER_7SEG` <br/>
 #### `CLOCK`:
    Generates 100MHz clock. This periodic signal is used in module `UP_DOWN_COUNTER`, which reacts on rising edge of the signal. <br/>
@@ -38,7 +38,21 @@ Write your text here.
    This module is used for displaying data on 7segment display. If have more displays, MUX has to be used. <br/>
    Both, common cathode and common anode can be used as well.
    
-      
+### Testbenches
+
+#### `CLOCK`: <br/>
+   ![image](images/tb_CLOCK.PNG)
+   
+#### `UP_DOWN_COUNTER`: <br/>
+   ![image](images/tb_UP_DOWN_COUNTER_01.PNG)
+   ![image](images/tb_UP_DOWN_COUNTER_02.PNG)
+   
+#### `DRIVER_4X7SEG`:
+   ![image](images/tb_DRIVER_4x7SEG_01.PNG)
+   ![image](images/tb_DRIVER_4x7SEG_02.PNG)
+   ![image](images/tb_DRIVER_4x7SEG_03.PNG)
+#### `DECODER_7SEG`:
+   ![image](images/tb_DECODER_7SEG.PNG)
 
 
 ## TOP module description and simulations
