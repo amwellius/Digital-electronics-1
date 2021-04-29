@@ -20,7 +20,7 @@ This data is shown on four 7segment displays (one part).
 ## Hardware description
 
    ### Programming Board
-   ![image](images/arty_a7.PNG)
+   ![image](images/arty_a7.png)
    - Main programming board is **Arty A7-100T**. It has four Pmod connectors (16.), we have used all of them.
    - 
    ### Main Board
