@@ -2,14 +2,14 @@
 
 ### Team members
 
-Martin Kousal 22xxxx <br/> 
+##### Martin Kousal 22xxxx <br/> 
 xxx[Link to GitHub project folder]( http://github.com/xxx) <br/> 
-Matej Ledvina 22xxxx <br/> 
+##### Matej Ledvina 22xxxx <br/> 
 xxx[Link to GitHub project folder]( http://github.com/xxx) <br/> 
-Tomáš Kříčka 22xxxx <br/> 
+##### Tomáš Kříčka 22xxxx <br/> 
 xxx[Link to GitHub project folder]( http://github.com/xxx) <br/> 
-Samuel Košík 221056 <br/>
-xxx[Link to GitHub project folder]( http://github.com/xxx)
+##### Samuel Košík 221056 <br/>
+[Link to GitHub project folder]( https://github.com/amwellius/Digital-electronics-1/tree/main/Labs/project)
 
 ### Project objectives
 
@@ -23,22 +23,36 @@ Write your text here.
 
 ## VHDL modules description and simulations
 
-   ### (last one). 7 Segment Driver Module <br/>
+### (last one). 7 Segment Driver Module <br/>
    This block consists of 4 smaller modules: `CLOCK`, `UP_DOWN_COUNTER`, `DRIVER_4X7SEG`, `DECODER_7SEG` <br/>
-   #### `CLOCK`:
+#### `CLOCK`:
    Generates 100MHz clock. This periodic signal is used in module `UP_DOWN_COUNTER`, which reacts on rising edge of the signal. <br/>
    Originally uses 4ms for each segment.
-   #### `UP_DOWN_COUNTER`:
+#### `UP_DOWN_COUNTER`:
    According settings (g_CNT_WIDTH), counts as the edge of the clock signal rises. <br/>
-   #### `DRIVER_4X7SEG`:
+#### `DRIVER_4X7SEG`:
    Main module, drives four 7segment displays. It is determinated by `CLOCK` and `UP_DOWN_COUNTER`.<br/>
    Process MUX uses above modules to set data_outputs to each 7segment display. <br/>
    Input is a 16bit std_vector (`b"xxxx xxxx xxxx xxxx"`)
-   #### `DECODER_7SEG`:
+#### `DECODER_7SEG`:
    This module is used for displaying data on 7segment display. If have more displays, MUX has to be used. <br/>
    Both, common cathode and common anode can be used as well.
    
-      
+### Testbenches
+
+#### `CLOCK`: <br/>
+   ![image](images/tb_CLOCK.PNG)
+   
+#### `UP_DOWN_COUNTER`: <br/>
+   ![image](images/tb_UP_DOWN_COUNTER_01.PNG)
+   ![image](images/tb_UP_DOWN_COUNTER_02.PNG)
+   
+#### `DRIVER_4X7SEG`:
+   ![image](images/tb_DRIVER_4x7SEG_01.PNG)
+   ![image](images/tb_DRIVER_4x7SEG_02.PNG)
+   ![image](images/tb_DRIVER_4x7SEG_03.PNG)
+#### `DECODER_7SEG`:
+   ![image](images/tb_DECODER_7SEG.PNG)
 
 
 ## TOP module description and simulations
