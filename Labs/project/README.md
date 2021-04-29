@@ -2,24 +2,36 @@
 
 ### Team members
 
-##### Martin Kousal 22xxxx <br/> 
+- Martin Kousal 22xxxx <br/> 
 xxx[Link to GitHub project folder]( http://github.com/xxx) <br/> 
-##### Matej Ledvina 22xxxx <br/> 
+- Matej Ledvina 22xxxx <br/> 
 xxx[Link to GitHub project folder]( http://github.com/xxx) <br/> 
-##### Tomáš Kříčka 22xxxx <br/> 
+- Tomáš Kříčka 22xxxx <br/> 
 xxx[Link to GitHub project folder]( http://github.com/xxx) <br/> 
-##### Samuel Košík 221056 <br/>
+- Samuel Košík 221056 <br/>
 [Link to GitHub project folder]( https://github.com/amwellius/Digital-electronics-1/tree/main/Labs/project)
 
 ### Project objectives
 
-Write your text here.
+Our application uses two hall sensors for measuring speed, traveled distance, burnt calories and time (not by the hall sensor). <br/>
+This data is shown on four 7segment displays (one part).
 
 
 ## Hardware description
 
-Write your text here.
+   ## Programming Board
+   ![image](images/arty_a7.PNG)
+   - Main programming board is **Arty A7-100T**. It has four Pmod connectors (16.), we have used all of them.
+   - 
+   ## Main Board
+   ![image](images/main_board.PNG)
+   - **Consists of:** three buttons, 7segmet display, Pmod connectors, ...
+   - 
 
+   ## Hall sensor board
+   ![image](images/hall_sensor_boars.PNG)
+   - ...
+   - ...
 
 ## VHDL modules description and simulations
 
@@ -50,7 +62,7 @@ Write your text here.
 #### `DRIVER_4X7SEG`:
    - These screenshots show how the multiplexer works. 
    - `s_data` is the main 16bit data input.
-   - `s_hex` is the 4bit data output, which is used in `DECODER_7SEG`. This module decodes the 4bit data value and diplays it on specific 7segment display.
+   - `s_hex` is the 4bit data output, which is used in `DECODER_7SEG`. This module decodes the 4bit data value and diplays it on a specific 7segment display.
    - `s_dig_o` shows which one of four displays is being used. `b"0001"` means display on very right side. 
    - `s_seg_o` represents common cathode bits. 
    ![image](images/tb_DRIVER_4x7SEG_01.PNG)
@@ -75,4 +87,16 @@ Write your text here.
 
 ## References
 
-   1. Write your text here.
+   ### Used:
+   - Theoretical knowledge from Digital-Electronics-1 Labs, 2021> [Link]( https://github.com/tomas-fryza/Digital-electronics-1/tree/master/Labs)
+   - Labs from classes from DE1
+   - DE1 Lecture PDF
+   -
+   -
+   ### Links:
+   - [7 Segment Display]( https://docs.rs-online.com/6e0e/0900766b8130126b.pdf)
+   - [Vivado tutorials]( https://vhdlwhiz.com/basic-vhdl-tutorials/ )
+   - [Tutorial from Xilinx]( https://www.xilinx.com/support/documentation/university/Vivado-Teaching/HDL-Design/2013x/Nexys4/Verilog/docs-pdf/Vivado_tutorial.pdf)
+   - [7 Segment Display]( https://docs.rs-online.com/6e0e/0900766b8130126b.pdf)
+   - [Board Editor]( https://jamboard.google.com/)
+   
