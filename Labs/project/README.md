@@ -48,8 +48,16 @@ Write your text here.
    ![image](images/tb_UP_DOWN_COUNTER_02.PNG)
    
 #### `DRIVER_4X7SEG`:
+   - These screenshots show how the multiplexer works. 
+   - `s_data` is the main 16bit data input.
+   - `s_hex` is the 4bit data output, which is used in `DECODER_7SEG`. This module decodes the 4bit data value and diplays it on specific 7segment display.
+   - `s_dig_o` shows which one of four displays is being used. `b"0001"` means display on very right side. 
+   - `s_seg_o` represents common cathode bits. 
    ![image](images/tb_DRIVER_4x7SEG_01.PNG)
    ![image](images/tb_DRIVER_4x7SEG_02.PNG)
+   
+   - This screenshot shows a real situation, when input data will be refreshed every one second (tachometer). 
+   - If data is not changed for a while, displays will use last data. This prevents from bad/unwanted values. 
    ![image](images/tb_DRIVER_4x7SEG_03.PNG)
 #### `DECODER_7SEG`:
    ![image](images/tb_DECODER_7SEG.PNG)
