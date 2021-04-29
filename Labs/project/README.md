@@ -19,16 +19,16 @@ This data is shown on four 7segment displays (one part).
 
 ## Hardware description
 
-   ## Programming Board
+   ### Programming Board
    ![image](images/arty_a7.PNG)
    - Main programming board is **Arty A7-100T**. It has four Pmod connectors (16.), we have used all of them.
    - 
-   ## Main Board
+   ### Main Board
    ![image](images/main_board.PNG)
    - **Consists of:** three buttons, 7segmet display, Pmod connectors, ...
    - 
 
-   ## Hall sensor board
+   ### Hall sensor board
    ![image](images/hall_sensor_boars.PNG)
    - ...
    - ...
