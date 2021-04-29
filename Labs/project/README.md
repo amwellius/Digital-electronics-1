@@ -2,13 +2,13 @@
 
 ### Team members
 
-- Martin Kousal 22xxxx <br/> 
+- **Martin Kousal**, **ID=** *22xxxx* <br/> 
 xxx[Link to GitHub project folder]( http://github.com/xxx) <br/> 
-- Matej Ledvina 22xxxx <br/> 
+- **Matej Ledvina** **ID=** *22xxxx* <br/> 
 xxx[Link to GitHub project folder]( http://github.com/xxx) <br/> 
-- Tomáš Kříčka 22xxxx <br/> 
+- **Tomáš Kříčka** **ID=**  *22xxxx* <br/> 
 xxx[Link to GitHub project folder]( http://github.com/xxx) <br/> 
-- Samuel Košík 221056 <br/>
+- **Samuel Košík** **ID=** *221056* <br/>
 [Link to GitHub project folder]( https://github.com/amwellius/Digital-electronics-1/tree/main/Labs/project)
 
 ### Project objectives
