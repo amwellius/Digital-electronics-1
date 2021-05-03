@@ -1,0 +1,149 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Mon May  3 09:51:45 2021
+| Host         : MARTIN-DESKTOP running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    71 |
+|    Minimum number of control sets                        |    71 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   418 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    71 |
+| >= 0 to < 4        |    57 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    12 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             137 |           58 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              91 |           48 |
+| Yes          | No                    | No                     |              21 |           12 |
+| Yes          | No                    | Yes                    |              27 |           27 |
+| Yes          | Yes                   | No                     |             266 |           85 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------------------------------+-------------------------------------+---------------------------------------------+------------------+----------------+--------------+
+|                 Clock Signal                |            Enable Signal            |               Set/Reset Signal              | Slice Load Count | Bel Load Count | Bels / Slice |
++---------------------------------------------+-------------------------------------+---------------------------------------------+------------------+----------------+--------------+
+|  sensor/s_speed_reg[5]_LDC_i_1_n_0          |                                     | sensor/s_speed_reg[5]_LDC_i_2_n_0           |                1 |              1 |         1.00 |
+|  sensor/s_speed_reg[6]_LDC_i_1_n_0          |                                     | sensor/s_speed_reg[6]_LDC_i_2_n_0           |                1 |              1 |         1.00 |
+|  sensor/s_speed_reg[7]_LDC_i_1_n_0          |                                     | sensor/s_speed_reg[7]_LDC_i_2_n_0           |                1 |              1 |         1.00 |
+|  sensor/s_speed_reg[8]_LDC_i_1_n_0          |                                     | sensor/s_speed_reg[8]_LDC_i_2_n_0           |                1 |              1 |         1.00 |
+|  sensor/s_speed_reg[9]_LDC_i_1_n_0          |                                     | sensor/s_speed_reg[9]_LDC_i_2_n_0           |                1 |              1 |         1.00 |
+|  sensor/s_speed_reg[13]_LDC_i_1_n_0         |                                     | sensor/s_speed_reg[13]_LDC_i_2_n_0          |                1 |              1 |         1.00 |
+|  sensor/s_speed_reg[3]_LDC_i_1_n_0          |                                     | sensor/s_speed_reg[3]_LDC_i_2_n_0           |                1 |              1 |         1.00 |
+|  sensor/s_speed_reg[2]_LDC_i_1_n_0          |                                     | sensor/s_speed_reg[2]_LDC_i_2_n_0           |                1 |              1 |         1.00 |
+|  sensor/s_speed_reg[4]_LDC_i_1_n_0          |                                     | sensor/s_speed_reg[4]_LDC_i_2_n_0           |                1 |              1 |         1.00 |
+|  sensor/disp_o_reg[9]_LDC_i_1_n_0           |                                     | sensor/disp_o_reg[9]_LDC_i_2_n_0            |                1 |              1 |         1.00 |
+|  sensor/disp_o_reg[8]_LDC_i_1_n_0           |                                     | sensor/disp_o_reg[8]_LDC_i_2_n_0            |                1 |              1 |         1.00 |
+|  sensor/s_speed_reg[10]_LDC_i_1_n_0         |                                     | sensor/s_speed_reg[10]_LDC_i_2_n_0          |                1 |              1 |         1.00 |
+|  sensor/s_speed_reg[11]_LDC_i_1_n_0         |                                     | sensor/s_speed_reg[11]_LDC_i_2_n_0          |                1 |              1 |         1.00 |
+|  sensor/s_speed_reg[12]_LDC_i_1_n_0         |                                     | sensor/s_speed_reg[12]_LDC_i_2_n_0          |                1 |              1 |         1.00 |
+|  driver_seg_4/bin_cnt0/s_cnt_local_reg[0]_2 |                                     |                                             |                1 |              1 |         1.00 |
+|  button_int/st_o_reg_i_2_n_0                |                                     |                                             |                1 |              1 |         1.00 |
+|  sensor/disp_o_reg[3]_LDC_i_1_n_0           |                                     | sensor/disp_o_reg[3]_LDC_i_2_n_0            |                1 |              1 |         1.00 |
+|  sensor/disp_o_reg[2]_LDC_i_1_n_0           |                                     | sensor/disp_o_reg[2]_LDC_i_2_n_0            |                1 |              1 |         1.00 |
+|  sensor/disp_o_reg[5]_LDC_i_1_n_0           |                                     | sensor/disp_o_reg[5]_LDC_i_2_n_0            |                1 |              1 |         1.00 |
+|  sensor/disp_o_reg[4]_LDC_i_1_n_0           |                                     | sensor/disp_o_reg[4]_LDC_i_2_n_0            |                1 |              1 |         1.00 |
+|  sensor/disp_o_reg[6]_LDC_i_1_n_0           |                                     | sensor/disp_o_reg[6]_LDC_i_2_n_0            |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                        | sensor/s_temp_reg_i_1_n_0           | sensor/s_speed_reg[5]_LDC_i_1_n_0           |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                        | sensor/s_temp_reg_i_1_n_0           | sensor/s_speed_reg[6]_LDC_i_1_n_0           |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                        | sensor/s_temp_reg_i_1_n_0           | sensor/s_speed_reg[7]_LDC_i_1_n_0           |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                        | sensor/s_temp_reg_i_1_n_0           | sensor/s_speed_reg[8]_LDC_i_1_n_0           |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                        | sensor/s_temp_reg_i_1_n_0           | sensor/s_speed_reg[9]_LDC_i_1_n_0           |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                        | sensor/s_temp_reg_i_1_n_0           | sensor/s_speed_reg[13]_LDC_i_1_n_0          |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                        | sensor/s_temp_reg_i_1_n_0           | sensor/s_speed_reg[3]_LDC_i_1_n_0           |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                        | sensor/s_temp_reg_i_1_n_0           | sensor/s_speed_reg[2]_LDC_i_1_n_0           |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                        | sensor/s_temp_reg_i_1_n_0           | sensor/s_speed_reg[4]_LDC_i_1_n_0           |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                        | sensor/s_temp_reg_i_1_n_0           | sensor/disp_o_reg[9]_LDC_i_1_n_0            |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                        | sensor/s_temp_reg_i_1_n_0           | sensor/disp_o_reg[8]_LDC_i_1_n_0            |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                        | sensor/s_temp_reg_i_1_n_0           | sensor/s_speed_reg[10]_LDC_i_1_n_0          |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                        | sensor/s_temp_reg_i_1_n_0           | sensor/s_speed_reg[11]_LDC_i_1_n_0          |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                        | sensor/s_temp_reg_i_1_n_0           | sensor/s_speed_reg[12]_LDC_i_1_n_0          |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                        | sensor/s_temp_reg_i_1_n_0           | sensor/disp_o_reg[13]_LDC_i_1_n_0           |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                        | sensor/s_temp_reg_i_1_n_0           | sensor/disp_o_reg[10]_LDC_i_1_n_0           |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                        | sensor/s_temp_reg_i_1_n_0           | sensor/disp_o_reg[14]_LDC_i_1_n_0           |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                        | sensor/s_temp_reg_i_1_n_0           | sensor/disp_o_reg[11]_LDC_i_1_n_0           |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                        | sensor/s_temp_reg_i_1_n_0           | sensor/disp_o_reg[15]_LDC_i_1_n_0           |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                        | sensor/s_temp_reg_i_1_n_0           | sensor/disp_o_reg[12]_LDC_i_1_n_0           |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                        | sensor/s_temp_reg_i_1_n_0           | sensor/disp_o_reg[7]_LDC_i_1_n_0            |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                        | sensor/s_temp_reg_i_1_n_0           | sensor/disp_o_reg[3]_LDC_i_1_n_0            |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                        | sensor/s_temp_reg_i_1_n_0           | sensor/disp_o_reg[2]_LDC_i_1_n_0            |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                        | sensor/s_temp_reg_i_1_n_0           | sensor/disp_o_reg[5]_LDC_i_1_n_0            |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                        | sensor/s_temp_reg_i_1_n_0           | sensor/disp_o_reg[4]_LDC_i_1_n_0            |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                        | sensor/s_temp_reg_i_1_n_0           | sensor/disp_o_reg[6]_LDC_i_1_n_0            |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                        | sensor/s_temp_reg_i_1_n_0           | sensor/disp_o_reg[1]_LDC_i_1_n_0            |                1 |              1 |         1.00 |
+|  sensor/disp_o_reg[15]_LDC_i_1_n_0          |                                     | sensor/disp_o_reg[15]_LDC_i_2_n_0           |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                        | jd_IBUF[7]                          | sensor/s_temp_reg_i_1_n_0                   |                1 |              1 |         1.00 |
+|  sensor/disp_o_reg[13]_LDC_i_1_n_0          |                                     | sensor/disp_o_reg[13]_LDC_i_2_n_0           |                1 |              1 |         1.00 |
+|  sensor/disp_o_reg[10]_LDC_i_1_n_0          |                                     | sensor/disp_o_reg[10]_LDC_i_2_n_0           |                1 |              1 |         1.00 |
+|  sensor/disp_o_reg[14]_LDC_i_1_n_0          |                                     | sensor/disp_o_reg[14]_LDC_i_2_n_0           |                1 |              1 |         1.00 |
+|  sensor/disp_o_reg[11]_LDC_i_1_n_0          |                                     | sensor/disp_o_reg[11]_LDC_i_2_n_0           |                1 |              1 |         1.00 |
+|  sensor/disp_o_reg[1]_LDC_i_1_n_0           |                                     | sensor/disp_o_reg[1]_LDC_i_2_n_0            |                1 |              1 |         1.00 |
+|  sensor/disp_o_reg[12]_LDC_i_1_n_0          |                                     | sensor/disp_o_reg[12]_LDC_i_2_n_0           |                1 |              1 |         1.00 |
+|  sensor/disp_o_reg[7]_LDC_i_1_n_0           |                                     | sensor/disp_o_reg[7]_LDC_i_2_n_0            |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                        | state_machine/State                 |                                             |                1 |              5 |         5.00 |
+|  CLK100MHZ_IBUF_BUFG                        |                                     | sensor/p_cnt.cnt[5]_i_1_n_0                 |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG                        | km_total/data_o[15]_i_1_n_0         |                                             |               11 |             16 |         1.45 |
+|  CLK100MHZ_IBUF_BUFG                        |                                     | time_total/p_cnt.milis[26]_i_1_n_0          |               11 |             27 |         2.45 |
+|  CLK100MHZ_IBUF_BUFG                        |                                     | driver_seg_4/clk_en0/s_cnt_local[0]_i_1_n_0 |                8 |             31 |         3.88 |
+|  CLK100MHZ_IBUF_BUFG                        | calories/s_tempp_trip[31]_i_2_n_0   | calories/s_tempp_trip[31]_i_1_n_0           |                9 |             32 |         3.56 |
+|  CLK100MHZ_IBUF_BUFG                        | state_machine/reset_3_reg_0         | state_machine/reset_4_reg_2                 |                9 |             32 |         3.56 |
+|  CLK100MHZ_IBUF_BUFG                        | state_machine/reset_3_reg_0         | state_machine/reset_4_reg_1                 |                9 |             32 |         3.56 |
+|  CLK100MHZ_IBUF_BUFG                        | button_int/s_cnt                    | button_int/s_cnt[31]_i_1_n_0                |                9 |             32 |         3.56 |
+|  CLK100MHZ_IBUF_BUFG                        | calories/s_counter_trip[31]_i_2_n_0 | calories/s_counter_trip[31]_i_1_n_0         |                9 |             32 |         3.56 |
+|  CLK100MHZ_IBUF_BUFG                        | calories/s_tempp_total[31]_i_2_n_0  | calories/s_tempp_total[31]_i_1_n_0          |                6 |             32 |         5.33 |
+|  CLK100MHZ_IBUF_BUFG                        | state_machine/reset_3_reg_1         | state_machine/mode_o_reg_1                  |               10 |             33 |         3.30 |
+|  CLK100MHZ_IBUF_BUFG                        | sensor/s_temp                       | sensor/s_speed_cnt[0]_i_1_n_0               |               23 |             40 |         1.74 |
+|  CLK100MHZ_IBUF_BUFG                        |                                     |                                             |               56 |            135 |         2.41 |
++---------------------------------------------+-------------------------------------+---------------------------------------------+------------------+----------------+--------------+
+
+

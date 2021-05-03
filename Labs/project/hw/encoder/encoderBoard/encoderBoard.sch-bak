@@ -1,0 +1,142 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L encoderBoard:MH253 U1
+U 1 1 606F408F
+P 4100 3150
+F 0 "U1" H 3922 3196 50  0000 R CNN
+F 1 "MH253" H 3922 3105 50  0000 R CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4100 3150 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/1811141821_MST-Magnesensor-Tech-MST-MH253ESO_C114369.pdf" H 4100 3150 50  0001 C CNN
+	1    4100 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 606F4CD4
+P 4100 3700
+F 0 "#PWR0101" H 4100 3450 50  0001 C CNN
+F 1 "GND" H 4105 3527 50  0000 C CNN
+F 2 "" H 4100 3700 50  0001 C CNN
+F 3 "" H 4100 3700 50  0001 C CNN
+	1    4100 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0102
+U 1 1 606F54ED
+P 4100 2550
+F 0 "#PWR0102" H 4100 2400 50  0001 C CNN
+F 1 "VCC" H 4115 2723 50  0000 C CNN
+F 2 "" H 4100 2550 50  0001 C CNN
+F 3 "" H 4100 2550 50  0001 C CNN
+	1    4100 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 606F5B33
+P 3350 3150
+F 0 "C1" H 3465 3196 50  0000 L CNN
+F 1 "10n" H 3465 3105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 3388 3000 50  0001 C CNN
+F 3 "~" H 3350 3150 50  0001 C CNN
+	1    3350 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 606F6C44
+P 4550 3400
+F 0 "C2" H 4665 3446 50  0000 L CNN
+F 1 "100p" H 4665 3355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 4588 3250 50  0001 C CNN
+F 3 "~" H 4550 3400 50  0001 C CNN
+	1    4550 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 606F6F97
+P 4550 2900
+F 0 "R1" H 4620 2946 50  0000 L CNN
+F 1 "10k" H 4620 2855 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 4480 2900 50  0001 C CNN
+F 3 "~" H 4550 2900 50  0001 C CNN
+	1    4550 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 3000 3350 2650
+Wire Wire Line
+	3350 2650 4100 2650
+Wire Wire Line
+	4100 2650 4100 2550
+Wire Wire Line
+	4100 2650 4100 2800
+Connection ~ 4100 2650
+Wire Wire Line
+	4100 2650 4550 2650
+Wire Wire Line
+	4550 2650 4550 2750
+Wire Wire Line
+	4350 3150 4550 3150
+Wire Wire Line
+	4550 3150 4550 3050
+Connection ~ 4550 3150
+Wire Wire Line
+	4550 3250 4550 3150
+Wire Wire Line
+	4100 3500 4100 3600
+Wire Wire Line
+	4100 3600 4550 3600
+Wire Wire Line
+	4550 3600 4550 3550
+Connection ~ 4100 3600
+Wire Wire Line
+	4100 3600 4100 3700
+Wire Wire Line
+	3350 3300 3350 3600
+Wire Wire Line
+	3350 3600 4100 3600
+$Comp
+L Connector_Generic:Conn_01x03 J1
+U 1 1 606F9E31
+P 5400 3150
+F 0 "J1" H 5318 2825 50  0000 C CNN
+F 1 "Conn_01x03" H 5318 2916 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Horizontal" H 5400 3150 50  0001 C CNN
+F 3 "~" H 5400 3150 50  0001 C CNN
+	1    5400 3150
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	4550 2650 5050 2650
+Wire Wire Line
+	5050 2650 5050 3050
+Wire Wire Line
+	5050 3050 5200 3050
+Connection ~ 4550 2650
+Wire Wire Line
+	4550 3150 5200 3150
+Wire Wire Line
+	4550 3600 5050 3600
+Wire Wire Line
+	5050 3600 5050 3250
+Wire Wire Line
+	5050 3250 5200 3250
+Connection ~ 4550 3600
+$EndSCHEMATC

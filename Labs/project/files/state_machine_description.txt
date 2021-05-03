@@ -1,0 +1,16 @@
+State Machine
+
+This is the main utility block of the device. It recives commands from the button interface
+and switches the outputs accordingly. Inputs up_i and down_i will cycle through the 4 modes
+of the device and light up their status LED. While in a mode the data stream from it's block
+will be sent to be displayed on the segment display via the data_o, with added decimal point
+or double dot if needed. While in a mode the reset and ok commands also aply for the selected 
+block only. The trip mode is special, because ot does not generate data on it's own, when
+activated it will send a mode change command to all block which will now store and display 
+data in an additional variable as well as keeping the total count going. The status LED of 
+trip will remain on as we cycle through the other modes until it is paused by the startstop
+button or turned off via the reset. At this point all trip data will be reset from all blocks
+and the normal total data will be displayed.
+
+NOTE: In order to save time and make the inner working of this device more clear, all simulated
+data has been significantly sped up.

@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../tachometer.srcs/sources_1/imports/new/sensor.vhd" \
+"../../../../tachometer.srcs/sim_1/imports/new/tb_sensor.vhd" \
+
+# Do not sort compile order
+nosort

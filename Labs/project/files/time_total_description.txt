@@ -1,0 +1,8 @@
+This block acts as a stopwatch. When startstop is applied, it will start or pause the counting.
+Reset will reset the total time. When the trip mode is enabled the stopwatch will automatically
+start counting the trip time and will reset before every trip is started. This block also 
+contains a function which converts the total time from binary integer to BCD code to be
+displayed on the 4 digit 7 segment display.
+
+NOTE: In order to save time and make the inner working of this device more clear, all simulated
+data has been significantly sped up.

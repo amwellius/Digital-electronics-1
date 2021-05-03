@@ -1,0 +1,12 @@
+This block counts the travel distance and sends it out to the display. Every 100m an pulse
+will appear on the meters_i which will add to the total count of up to 999,9 km. When the
+trip mode is activated the block will count the trip time and send it to the display instead
+the total time is being still counted in the background. rst signal will make the current
+displayed data reset to 0. The enable signal will be present if the trip is not paused, on
+pause the trip data is not counted. This block automaticaly wipes previous trip data when
+the mode is turned on.
+This block also contains a function which converts the traveled distance from binary integer
+to BCD code to be displayed on the 4 digit 7 segment display.
+
+NOTE: In order to save time and make the inner working of this device more clear, all simulated
+data has been significantly sped up.

@@ -1,0 +1,11 @@
+This block reads the input from real world buttons and translates them to commands which
+will be sent to the state_machine controller. When buttons up or down are pressed the
+interface will enter a cooldown state when no additional button presses will be registered 
+(to prevent jitter) after the cooldown passes, the interface will send an up or down command
+out. If the ok button is pressed the device enters the cooldown state, after which it will
+wait for a longer ammount of time. If no additional ok button press is registered, the 
+interface will send out an startstop command. If however the ok button would be pressed
+again, the interface will send out the reset command.
+
+NOTE: In order to save time and make the inner working of this device more clear, all simulated
+data has been sped up.

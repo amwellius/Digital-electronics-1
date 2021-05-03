@@ -1,0 +1,1036 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Mon May  3 09:53:17 2021
+| Host         : MARTIN-DESKTOP running 64-bit major release  (build 9200)
+| Command      : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
+| Design       : top
+| Device       : xc7a100tcsg324-1
+| Speed File   : -1
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 199
++-----------+------------------+----------------------------------+------------+
+| Rule      | Severity         | Description                      | Violations |
++-----------+------------------+----------------------------------+------------+
+| TIMING-14 | Critical Warning | LUT on the clock tree            | 29         |
+| HPDR-1    | Warning          | Port pin direction inconsistency | 19         |
+| LUTAR-1   | Warning          | LUT drives async reset alert     | 54         |
+| SYNTH-13  | Warning          | combinational multiplier         | 2          |
+| TIMING-16 | Warning          | Large setup violation            | 61         |
+| TIMING-18 | Warning          | Missing input or output delay    | 32         |
+| TIMING-20 | Warning          | Non-clocked latch                | 2          |
++-----------+------------------+----------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-14#1 Critical Warning
+LUT on the clock tree  
+The LUT sensor/disp_o_reg[10]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#2 Critical Warning
+LUT on the clock tree  
+The LUT sensor/disp_o_reg[11]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#3 Critical Warning
+LUT on the clock tree  
+The LUT sensor/disp_o_reg[12]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#4 Critical Warning
+LUT on the clock tree  
+The LUT sensor/disp_o_reg[12]_LDC_i_8 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#5 Critical Warning
+LUT on the clock tree  
+The LUT sensor/disp_o_reg[13]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#6 Critical Warning
+LUT on the clock tree  
+The LUT sensor/disp_o_reg[14]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#7 Critical Warning
+LUT on the clock tree  
+The LUT sensor/disp_o_reg[15]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#8 Critical Warning
+LUT on the clock tree  
+The LUT sensor/disp_o_reg[1]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#9 Critical Warning
+LUT on the clock tree  
+The LUT sensor/disp_o_reg[2]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#10 Critical Warning
+LUT on the clock tree  
+The LUT sensor/disp_o_reg[3]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#11 Critical Warning
+LUT on the clock tree  
+The LUT sensor/disp_o_reg[4]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#12 Critical Warning
+LUT on the clock tree  
+The LUT sensor/disp_o_reg[5]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#13 Critical Warning
+LUT on the clock tree  
+The LUT sensor/disp_o_reg[6]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#14 Critical Warning
+LUT on the clock tree  
+The LUT sensor/disp_o_reg[7]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#15 Critical Warning
+LUT on the clock tree  
+The LUT sensor/disp_o_reg[8]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#16 Critical Warning
+LUT on the clock tree  
+The LUT sensor/disp_o_reg[9]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#17 Critical Warning
+LUT on the clock tree  
+The LUT sensor/s_speed_reg[10]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#18 Critical Warning
+LUT on the clock tree  
+The LUT sensor/s_speed_reg[11]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#19 Critical Warning
+LUT on the clock tree  
+The LUT sensor/s_speed_reg[12]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#20 Critical Warning
+LUT on the clock tree  
+The LUT sensor/s_speed_reg[13]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#21 Critical Warning
+LUT on the clock tree  
+The LUT sensor/s_speed_reg[2]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#22 Critical Warning
+LUT on the clock tree  
+The LUT sensor/s_speed_reg[3]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#23 Critical Warning
+LUT on the clock tree  
+The LUT sensor/s_speed_reg[4]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#24 Critical Warning
+LUT on the clock tree  
+The LUT sensor/s_speed_reg[5]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#25 Critical Warning
+LUT on the clock tree  
+The LUT sensor/s_speed_reg[5]_LDC_i_6 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#26 Critical Warning
+LUT on the clock tree  
+The LUT sensor/s_speed_reg[6]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#27 Critical Warning
+LUT on the clock tree  
+The LUT sensor/s_speed_reg[7]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#28 Critical Warning
+LUT on the clock tree  
+The LUT sensor/s_speed_reg[8]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#29 Critical Warning
+LUT on the clock tree  
+The LUT sensor/s_speed_reg[9]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+HPDR-1#1 Warning
+Port pin direction inconsistency  
+Hierarchical port(pin) ja[3] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (ja[3]) connected to this Port, but both were not found.
+Related violations: <none>
+
+HPDR-1#2 Warning
+Port pin direction inconsistency  
+Hierarchical port(pin) ja[4] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (ja[4]) connected to this Port, but both were not found.
+Related violations: <none>
+
+HPDR-1#3 Warning
+Port pin direction inconsistency  
+Hierarchical port(pin) ja[5] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (ja[5]) connected to this Port, but both were not found.
+Related violations: <none>
+
+HPDR-1#4 Warning
+Port pin direction inconsistency  
+Hierarchical port(pin) ja[6] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (ja[6]) connected to this Port, but both were not found.
+Related violations: <none>
+
+HPDR-1#5 Warning
+Port pin direction inconsistency  
+Hierarchical port(pin) ja[7] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (ja[7]) connected to this Port, but both were not found.
+Related violations: <none>
+
+HPDR-1#6 Warning
+Port pin direction inconsistency  
+Hierarchical port(pin) jb[2] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (jb[2]) connected to this Port, but both were not found.
+Related violations: <none>
+
+HPDR-1#7 Warning
+Port pin direction inconsistency  
+Hierarchical port(pin) jb[3] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (jb[3]) connected to this Port, but both were not found.
+Related violations: <none>
+
+HPDR-1#8 Warning
+Port pin direction inconsistency  
+Hierarchical port(pin) jb[4] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (jb[4]) connected to this Port, but both were not found.
+Related violations: <none>
+
+HPDR-1#9 Warning
+Port pin direction inconsistency  
+Hierarchical port(pin) jb[5] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (jb[5]) connected to this Port, but both were not found.
+Related violations: <none>
+
+HPDR-1#10 Warning
+Port pin direction inconsistency  
+Hierarchical port(pin) jb[6] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (jb[6]) connected to this Port, but both were not found.
+Related violations: <none>
+
+HPDR-1#11 Warning
+Port pin direction inconsistency  
+Hierarchical port(pin) jb[7] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (jb[7]) connected to this Port, but both were not found.
+Related violations: <none>
+
+HPDR-1#12 Warning
+Port pin direction inconsistency  
+Hierarchical port(pin) jc[0] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (jc[0]) connected to this Port, but both were not found.
+Related violations: <none>
+
+HPDR-1#13 Warning
+Port pin direction inconsistency  
+Hierarchical port(pin) jc[1] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (jc[1]) connected to this Port, but both were not found.
+Related violations: <none>
+
+HPDR-1#14 Warning
+Port pin direction inconsistency  
+Hierarchical port(pin) jc[2] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (jc[2]) connected to this Port, but both were not found.
+Related violations: <none>
+
+HPDR-1#15 Warning
+Port pin direction inconsistency  
+Hierarchical port(pin) jc[3] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (jc[3]) connected to this Port, but both were not found.
+Related violations: <none>
+
+HPDR-1#16 Warning
+Port pin direction inconsistency  
+Hierarchical port(pin) jc[4] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (jc[4]) connected to this Port, but both were not found.
+Related violations: <none>
+
+HPDR-1#17 Warning
+Port pin direction inconsistency  
+Hierarchical port(pin) jc[5] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (jc[5]) connected to this Port, but both were not found.
+Related violations: <none>
+
+HPDR-1#18 Warning
+Port pin direction inconsistency  
+Hierarchical port(pin) jc[6] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (jc[6]) connected to this Port, but both were not found.
+Related violations: <none>
+
+HPDR-1#19 Warning
+Port pin direction inconsistency  
+Hierarchical port(pin) jc[7] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (jc[7]) connected to this Port, but both were not found.
+Related violations: <none>
+
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell sensor/disp_o_reg[10]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/disp_o_reg[10]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell sensor/disp_o_reg[10]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/disp_o_reg[10]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#3 Warning
+LUT drives async reset alert  
+LUT cell sensor/disp_o_reg[11]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/disp_o_reg[11]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#4 Warning
+LUT drives async reset alert  
+LUT cell sensor/disp_o_reg[11]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/disp_o_reg[11]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#5 Warning
+LUT drives async reset alert  
+LUT cell sensor/disp_o_reg[12]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/disp_o_reg[12]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#6 Warning
+LUT drives async reset alert  
+LUT cell sensor/disp_o_reg[12]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/disp_o_reg[12]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#7 Warning
+LUT drives async reset alert  
+LUT cell sensor/disp_o_reg[13]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/disp_o_reg[13]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#8 Warning
+LUT drives async reset alert  
+LUT cell sensor/disp_o_reg[13]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/disp_o_reg[13]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#9 Warning
+LUT drives async reset alert  
+LUT cell sensor/disp_o_reg[14]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/disp_o_reg[14]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#10 Warning
+LUT drives async reset alert  
+LUT cell sensor/disp_o_reg[14]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/disp_o_reg[14]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#11 Warning
+LUT drives async reset alert  
+LUT cell sensor/disp_o_reg[15]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/disp_o_reg[15]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#12 Warning
+LUT drives async reset alert  
+LUT cell sensor/disp_o_reg[15]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/disp_o_reg[15]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#13 Warning
+LUT drives async reset alert  
+LUT cell sensor/disp_o_reg[1]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/disp_o_reg[1]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#14 Warning
+LUT drives async reset alert  
+LUT cell sensor/disp_o_reg[1]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/disp_o_reg[1]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#15 Warning
+LUT drives async reset alert  
+LUT cell sensor/disp_o_reg[2]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/disp_o_reg[2]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#16 Warning
+LUT drives async reset alert  
+LUT cell sensor/disp_o_reg[2]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/disp_o_reg[2]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#17 Warning
+LUT drives async reset alert  
+LUT cell sensor/disp_o_reg[3]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/disp_o_reg[3]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#18 Warning
+LUT drives async reset alert  
+LUT cell sensor/disp_o_reg[3]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/disp_o_reg[3]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#19 Warning
+LUT drives async reset alert  
+LUT cell sensor/disp_o_reg[4]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/disp_o_reg[4]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#20 Warning
+LUT drives async reset alert  
+LUT cell sensor/disp_o_reg[4]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/disp_o_reg[4]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#21 Warning
+LUT drives async reset alert  
+LUT cell sensor/disp_o_reg[5]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/disp_o_reg[5]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#22 Warning
+LUT drives async reset alert  
+LUT cell sensor/disp_o_reg[5]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/disp_o_reg[5]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#23 Warning
+LUT drives async reset alert  
+LUT cell sensor/disp_o_reg[6]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/disp_o_reg[6]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#24 Warning
+LUT drives async reset alert  
+LUT cell sensor/disp_o_reg[6]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/disp_o_reg[6]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#25 Warning
+LUT drives async reset alert  
+LUT cell sensor/disp_o_reg[7]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/disp_o_reg[7]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#26 Warning
+LUT drives async reset alert  
+LUT cell sensor/disp_o_reg[7]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/disp_o_reg[7]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#27 Warning
+LUT drives async reset alert  
+LUT cell sensor/disp_o_reg[8]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/disp_o_reg[8]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#28 Warning
+LUT drives async reset alert  
+LUT cell sensor/disp_o_reg[8]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/disp_o_reg[8]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#29 Warning
+LUT drives async reset alert  
+LUT cell sensor/disp_o_reg[9]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/disp_o_reg[9]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#30 Warning
+LUT drives async reset alert  
+LUT cell sensor/disp_o_reg[9]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/disp_o_reg[9]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#31 Warning
+LUT drives async reset alert  
+LUT cell sensor/s_speed_reg[10]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/s_speed_reg[10]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#32 Warning
+LUT drives async reset alert  
+LUT cell sensor/s_speed_reg[10]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/s_speed_reg[10]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#33 Warning
+LUT drives async reset alert  
+LUT cell sensor/s_speed_reg[11]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/s_speed_reg[11]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#34 Warning
+LUT drives async reset alert  
+LUT cell sensor/s_speed_reg[11]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/s_speed_reg[11]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#35 Warning
+LUT drives async reset alert  
+LUT cell sensor/s_speed_reg[12]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/s_speed_reg[12]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#36 Warning
+LUT drives async reset alert  
+LUT cell sensor/s_speed_reg[12]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/s_speed_reg[12]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#37 Warning
+LUT drives async reset alert  
+LUT cell sensor/s_speed_reg[13]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/s_speed_reg[13]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#38 Warning
+LUT drives async reset alert  
+LUT cell sensor/s_speed_reg[13]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/s_speed_reg[13]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#39 Warning
+LUT drives async reset alert  
+LUT cell sensor/s_speed_reg[2]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/s_speed_reg[2]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#40 Warning
+LUT drives async reset alert  
+LUT cell sensor/s_speed_reg[2]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/s_speed_reg[2]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#41 Warning
+LUT drives async reset alert  
+LUT cell sensor/s_speed_reg[3]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/s_speed_reg[3]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#42 Warning
+LUT drives async reset alert  
+LUT cell sensor/s_speed_reg[3]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/s_speed_reg[3]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#43 Warning
+LUT drives async reset alert  
+LUT cell sensor/s_speed_reg[4]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/s_speed_reg[4]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#44 Warning
+LUT drives async reset alert  
+LUT cell sensor/s_speed_reg[4]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/s_speed_reg[4]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#45 Warning
+LUT drives async reset alert  
+LUT cell sensor/s_speed_reg[5]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/s_speed_reg[5]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#46 Warning
+LUT drives async reset alert  
+LUT cell sensor/s_speed_reg[5]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/s_speed_reg[5]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#47 Warning
+LUT drives async reset alert  
+LUT cell sensor/s_speed_reg[6]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/s_speed_reg[6]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#48 Warning
+LUT drives async reset alert  
+LUT cell sensor/s_speed_reg[6]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/s_speed_reg[6]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#49 Warning
+LUT drives async reset alert  
+LUT cell sensor/s_speed_reg[7]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/s_speed_reg[7]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#50 Warning
+LUT drives async reset alert  
+LUT cell sensor/s_speed_reg[7]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/s_speed_reg[7]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#51 Warning
+LUT drives async reset alert  
+LUT cell sensor/s_speed_reg[8]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/s_speed_reg[8]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#52 Warning
+LUT drives async reset alert  
+LUT cell sensor/s_speed_reg[8]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/s_speed_reg[8]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#53 Warning
+LUT drives async reset alert  
+LUT cell sensor/s_speed_reg[9]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/s_speed_reg[9]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#54 Warning
+LUT drives async reset alert  
+LUT cell sensor/s_speed_reg[9]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/s_speed_reg[9]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+SYNTH-13#1 Warning
+combinational multiplier  
+Detected combinational multiplier in DSP instance calories/temp.
+Related violations: <none>
+
+SYNTH-13#2 Warning
+combinational multiplier  
+Detected combinational multiplier in DSP instance calories/temp__0.
+Related violations: <none>
+
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -1.019 ns between time_total/s_reset_re_reg/C (clocked by sys_clk_pin) and time_total/data_o_reg[12]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -1.144 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[0]_replica/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -1.159 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[0]_replica_1/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -1.318 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[31]_rep__2/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -1.333 ns between state_machine/mode_o_reg/C (clocked by sys_clk_pin) and km_total/data_o_reg[3]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -1.389 ns between state_machine/mode_o_reg/C (clocked by sys_clk_pin) and km_total/data_o_reg[12]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -1.446 ns between km_total/s_mode_re_reg/C (clocked by sys_clk_pin) and km_total/data_o_reg[10]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -1.446 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[24]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#9 Warning
+Large setup violation  
+There is a large setup violation of -1.446 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[25]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#10 Warning
+Large setup violation  
+There is a large setup violation of -1.446 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[26]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#11 Warning
+Large setup violation  
+There is a large setup violation of -1.446 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[27]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#12 Warning
+Large setup violation  
+There is a large setup violation of -1.467 ns between state_machine/mode_o_reg/C (clocked by sys_clk_pin) and km_total/data_o_reg[6]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#13 Warning
+Large setup violation  
+There is a large setup violation of -1.487 ns between km_total/s_mode_re_reg/C (clocked by sys_clk_pin) and km_total/data_o_reg[9]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#14 Warning
+Large setup violation  
+There is a large setup violation of -1.532 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[28]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#15 Warning
+Large setup violation  
+There is a large setup violation of -1.532 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[29]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#16 Warning
+Large setup violation  
+There is a large setup violation of -1.532 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[30]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#17 Warning
+Large setup violation  
+There is a large setup violation of -1.532 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[31]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#18 Warning
+Large setup violation  
+There is a large setup violation of -1.546 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[10]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#19 Warning
+Large setup violation  
+There is a large setup violation of -1.576 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[19]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#20 Warning
+Large setup violation  
+There is a large setup violation of -1.581 ns between km_total/s_mode_re_reg/C (clocked by sys_clk_pin) and km_total/data_o_reg[11]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#21 Warning
+Large setup violation  
+There is a large setup violation of -1.610 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[14]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#22 Warning
+Large setup violation  
+There is a large setup violation of -1.615 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[11]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#23 Warning
+Large setup violation  
+There is a large setup violation of -1.615 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[7]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#24 Warning
+Large setup violation  
+There is a large setup violation of -1.615 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[9]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#25 Warning
+Large setup violation  
+There is a large setup violation of -1.652 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[15]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#26 Warning
+Large setup violation  
+There is a large setup violation of -1.652 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[17]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#27 Warning
+Large setup violation  
+There is a large setup violation of -1.671 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[1]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#28 Warning
+Large setup violation  
+There is a large setup violation of -1.671 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[2]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#29 Warning
+Large setup violation  
+There is a large setup violation of -1.671 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[3]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#30 Warning
+Large setup violation  
+There is a large setup violation of -1.674 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[31]_rep__0/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#31 Warning
+Large setup violation  
+There is a large setup violation of -1.693 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[4]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#32 Warning
+Large setup violation  
+There is a large setup violation of -1.697 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[0]_replica_4/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#33 Warning
+Large setup violation  
+There is a large setup violation of -1.704 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[21]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#34 Warning
+Large setup violation  
+There is a large setup violation of -1.704 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[22]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#35 Warning
+Large setup violation  
+There is a large setup violation of -1.704 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[23]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#36 Warning
+Large setup violation  
+There is a large setup violation of -1.718 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[18]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#37 Warning
+Large setup violation  
+There is a large setup violation of -1.738 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[13]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#38 Warning
+Large setup violation  
+There is a large setup violation of -1.738 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[16]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#39 Warning
+Large setup violation  
+There is a large setup violation of -1.738 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[20]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#40 Warning
+Large setup violation  
+There is a large setup violation of -1.739 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[31]_rep__1/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#41 Warning
+Large setup violation  
+There is a large setup violation of -1.840 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[0]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#42 Warning
+Large setup violation  
+There is a large setup violation of -1.840 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[5]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#43 Warning
+Large setup violation  
+There is a large setup violation of -1.850 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[12]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#44 Warning
+Large setup violation  
+There is a large setup violation of -1.850 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[8]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#45 Warning
+Large setup violation  
+There is a large setup violation of -1.935 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[6]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#46 Warning
+Large setup violation  
+There is a large setup violation of -15.499 ns between calories/s_counter_trip_reg[10]/C (clocked by sys_clk_pin) and calories/calsdisp_o_reg[0]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#47 Warning
+Large setup violation  
+There is a large setup violation of -20.025 ns between calories/s_counter_trip_reg[10]/C (clocked by sys_clk_pin) and calories/calsdisp_o_reg[13]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#48 Warning
+Large setup violation  
+There is a large setup violation of -20.186 ns between calories/s_counter_trip_reg[10]/C (clocked by sys_clk_pin) and calories/calsdisp_o_reg[15]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#49 Warning
+Large setup violation  
+There is a large setup violation of -20.269 ns between calories/s_counter_trip_reg[10]/C (clocked by sys_clk_pin) and calories/calsdisp_o_reg[3]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#50 Warning
+Large setup violation  
+There is a large setup violation of -20.358 ns between calories/s_counter_trip_reg[10]/C (clocked by sys_clk_pin) and calories/calsdisp_o_reg[14]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#51 Warning
+Large setup violation  
+There is a large setup violation of -20.440 ns between calories/s_counter_trip_reg[10]/C (clocked by sys_clk_pin) and calories/calsdisp_o_reg[5]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#52 Warning
+Large setup violation  
+There is a large setup violation of -20.457 ns between calories/s_counter_trip_reg[10]/C (clocked by sys_clk_pin) and calories/calsdisp_o_reg[2]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#53 Warning
+Large setup violation  
+There is a large setup violation of -20.534 ns between calories/s_counter_trip_reg[10]/C (clocked by sys_clk_pin) and calories/calsdisp_o_reg[1]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#54 Warning
+Large setup violation  
+There is a large setup violation of -20.536 ns between calories/s_counter_trip_reg[10]/C (clocked by sys_clk_pin) and calories/calsdisp_o_reg[4]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#55 Warning
+Large setup violation  
+There is a large setup violation of -20.624 ns between calories/s_counter_trip_reg[10]/C (clocked by sys_clk_pin) and calories/calsdisp_o_reg[7]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#56 Warning
+Large setup violation  
+There is a large setup violation of -20.772 ns between calories/s_counter_trip_reg[10]/C (clocked by sys_clk_pin) and calories/calsdisp_o_reg[6]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#57 Warning
+Large setup violation  
+There is a large setup violation of -20.781 ns between calories/s_counter_trip_reg[10]/C (clocked by sys_clk_pin) and calories/calsdisp_o_reg[8]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#58 Warning
+Large setup violation  
+There is a large setup violation of -20.887 ns between calories/s_counter_trip_reg[10]/C (clocked by sys_clk_pin) and calories/calsdisp_o_reg[11]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#59 Warning
+Large setup violation  
+There is a large setup violation of -21.134 ns between calories/s_counter_trip_reg[10]/C (clocked by sys_clk_pin) and calories/calsdisp_o_reg[12]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#60 Warning
+Large setup violation  
+There is a large setup violation of -21.337 ns between calories/s_counter_trip_reg[10]/C (clocked by sys_clk_pin) and calories/calsdisp_o_reg[9]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#61 Warning
+Large setup violation  
+There is a large setup violation of -21.358 ns between calories/s_counter_trip_reg[10]/C (clocked by sys_clk_pin) and calories/calsdisp_o_reg[10]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on ja[0] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on ja[1] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An input delay is missing on ja[2] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An input delay is missing on ja[3] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#5 Warning
+Missing input or output delay  
+An input delay is missing on ja[4] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#6 Warning
+Missing input or output delay  
+An input delay is missing on ja[5] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#7 Warning
+Missing input or output delay  
+An input delay is missing on ja[6] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#8 Warning
+Missing input or output delay  
+An input delay is missing on ja[7] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#9 Warning
+Missing input or output delay  
+An input delay is missing on jb[0] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#10 Warning
+Missing input or output delay  
+An input delay is missing on jb[1] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#11 Warning
+Missing input or output delay  
+An input delay is missing on jb[2] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#12 Warning
+Missing input or output delay  
+An input delay is missing on jb[3] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#13 Warning
+Missing input or output delay  
+An input delay is missing on jb[4] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#14 Warning
+Missing input or output delay  
+An input delay is missing on jb[5] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#15 Warning
+Missing input or output delay  
+An input delay is missing on jb[6] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#16 Warning
+Missing input or output delay  
+An input delay is missing on jb[7] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#17 Warning
+Missing input or output delay  
+An input delay is missing on jc[0] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#18 Warning
+Missing input or output delay  
+An input delay is missing on jc[1] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#19 Warning
+Missing input or output delay  
+An input delay is missing on jc[2] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#20 Warning
+Missing input or output delay  
+An input delay is missing on jc[3] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#21 Warning
+Missing input or output delay  
+An input delay is missing on jc[4] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#22 Warning
+Missing input or output delay  
+An input delay is missing on jc[5] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#23 Warning
+Missing input or output delay  
+An input delay is missing on jc[6] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#24 Warning
+Missing input or output delay  
+An input delay is missing on jc[7] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#25 Warning
+Missing input or output delay  
+An input delay is missing on jd[0] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#26 Warning
+Missing input or output delay  
+An input delay is missing on jd[1] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#27 Warning
+Missing input or output delay  
+An input delay is missing on jd[2] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#28 Warning
+Missing input or output delay  
+An input delay is missing on jd[3] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#29 Warning
+Missing input or output delay  
+An input delay is missing on jd[4] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#30 Warning
+Missing input or output delay  
+An input delay is missing on jd[5] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#31 Warning
+Missing input or output delay  
+An input delay is missing on jd[6] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#32 Warning
+Missing input or output delay  
+An input delay is missing on jd[7] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch button_int/st_o_reg cannot be properly analyzed as its control pin button_int/st_o_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#2 Warning
+Non-clocked latch  
+The latch driver_seg_4/dp_o_reg cannot be properly analyzed as its control pin driver_seg_4/dp_o_reg/G is not reached by a timing clock
+Related violations: <none>
+
+

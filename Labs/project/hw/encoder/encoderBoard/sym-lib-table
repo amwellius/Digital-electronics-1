@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name encoderBoard)(type Legacy)(uri ${KIPRJMOD}/encoderBoard.lib)(options "")(descr ""))
+)

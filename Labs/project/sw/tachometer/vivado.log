@@ -1,0 +1,37 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun May  2 12:51:49 2021
+# Process ID: 2836
+# Current directory: C:/Users/Martin/Disk Google/VUT/BPC-EKT/4.semestr/BPC-DE1/Digital-electronics-1-Tachometer/sw/tachometer
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent27828 C:\Users\Martin\Disk Google\VUT\BPC-EKT\4.semestr\BPC-DE1\Digital-electronics-1-Tachometer\sw\tachometer\tachometer.xpr
+# Log file: C:/Users/Martin/Disk Google/VUT/BPC-EKT/4.semestr/BPC-DE1/Digital-electronics-1-Tachometer/sw/tachometer/vivado.log
+# Journal file: C:/Users/Martin/Disk Google/VUT/BPC-EKT/4.semestr/BPC-DE1/Digital-electronics-1-Tachometer/sw/tachometer\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Martin/Disk Google/VUT/BPC-EKT/4.semestr/BPC-DE1/Digital-electronics-1-Tachometer/sw/tachometer/tachometer.xpr}
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/Martin/Disk Google/VUT/BPC-EKT/4.semestr/BPC-DE1/Digital-electronics-1-Tachometer/sw/tachometer'
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/Martin/Disk Google/VUT/BPC-EKT/4.semestr/BPC-DE1/Digital-electronics-1-Tachometer/sw/tachometer/tachometer.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:05 . Memory (MB): peak = 1002.125 ; gain = 0.000
+import_files -norecurse {{C:/Users/Martin/Disk Google/VUT/BPC-EKT/4.semestr/BPC-DE1/Digital-electronics-1-Tachometer/vivado files/sources/DECODER_7SEG.vhd} {C:/Users/Martin/Disk Google/VUT/BPC-EKT/4.semestr/BPC-DE1/Digital-electronics-1-Tachometer/vivado files/sources/CLOCK.vhd} {C:/Users/Martin/Disk Google/VUT/BPC-EKT/4.semestr/BPC-DE1/Digital-electronics-1-Tachometer/vivado files/sources/UP_DOWN_COUNTER.vhd} {C:/Users/Martin/Disk Google/VUT/BPC-EKT/4.semestr/BPC-DE1/Digital-electronics-1-Tachometer/vivado files/sources/DRIVER_4x7SEG.vhd}}
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+import_files -fileset sim_1 -norecurse {{C:/Users/Martin/Disk Google/VUT/BPC-EKT/4.semestr/BPC-DE1/Digital-electronics-1-Tachometer/vivado files/sims/tb_DECODER_7SEG.vhd} {C:/Users/Martin/Disk Google/VUT/BPC-EKT/4.semestr/BPC-DE1/Digital-electronics-1-Tachometer/vivado files/sims/tb_DRIVER_4x7SEG.vhd} {C:/Users/Martin/Disk Google/VUT/BPC-EKT/4.semestr/BPC-DE1/Digital-electronics-1-Tachometer/vivado files/sims/tb_UP_DOWN_COUNTER.vhd} {C:/Users/Martin/Disk Google/VUT/BPC-EKT/4.semestr/BPC-DE1/Digital-electronics-1-Tachometer/vivado files/sims/tb_CLOCK.vhd}}
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+import_files -norecurse C:/Users/Martin/Desktop/temp/vivado/projekt/projekt.srcs/sources_1/new/sensor.vhd
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+import_files -fileset sim_1 -norecurse C:/Users/Martin/Desktop/temp/vivado/projekt/projekt.srcs/sim_1/new/tb_sensor.vhd
+update_compile_order -fileset sim_1
+add_files -fileset constrs_1 -norecurse C:/Users/Martin/Desktop/Arty-A7-100-Master.xdc
+import_files -fileset constrs_1 C:/Users/Martin/Desktop/Arty-A7-100-Master.xdc
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun May  2 13:08:43 2021...
