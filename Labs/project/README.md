@@ -14,6 +14,7 @@
 
 ### Team members
 
+<<<<<<< HEAD
 - **Martin Kousal**, **ID=** *221063* <br/> 
 [Link to GitHub project folder]( http://github.com/mkousal/Digital-electronics-1-Tachometer) <br/> 
 - **Matej Ledvina**, **ID=** *221339* <br/> 
@@ -22,6 +23,16 @@
 [Link to GitHub]( https://github.com/TomasKricka) <br/> 
 - **Samuel Košík**, **ID=** *221056* <br/>
 [Link to GitHub]( https://github.com/amwellius/Digital-electronics-1)
+=======
+- **Martin Kousal**, **ID=** *22xxxx* <br/> 
+xxx[Link to GitHub project folder]( http://github.com/xxx) <br/> 
+- **Matej Ledvina**, **ID=** *22xxxx* <br/> 
+xxx[Link to GitHub project folder]( http://github.com/xxx) <br/> 
+- **Tomáš Kříčka**, **ID=**  *22xxxx* <br/> 
+xxx[Link to GitHub project folder]( http://github.com/xxx) <br/> 
+- **Samuel Košík**, **ID=** *221056* <br/>
+[Link to GitHub project folder]( https://github.com/amwellius/Digital-electronics-1/tree/main/Labs/project)
+>>>>>>> 8f84b202f57888dbd8a43caef93f34f7567aad51
 
 ### Project objectives
 
@@ -41,9 +52,14 @@ Burnt calories will increase only by stepping the pedals, not by downhill riding
 
    ### Programming Board
    ![image](images/arty_a7.png)
+<<<<<<< HEAD
    - Main programming board is **Arty A7-100T**. It has four Pmod connectors (16.), we have used all of them
    - Other buttons and LEDs are not used => See **Main Board**
 
+=======
+   - Main programming board is **Arty A7-100T**. It has four Pmod connectors (16.), we have used all of them.
+   - 
+>>>>>>> 8f84b202f57888dbd8a43caef93f34f7567aad51
    ### Main Board
    ![image](images/tachometerBoard_front.png)
    ![image](images/tachometerBoard_back.png)
@@ -199,10 +215,20 @@ Video presentation is available [here](https://youtu.be/21QbKaQYVqw).
 
 ## References
 
+<<<<<<< HEAD
    ### Used materials:
    - Theoretical knowledge from Digital-Electronics-1 Labs, 2021 > [Link]( https://github.com/tomas-fryza/Digital-electronics-1/tree/master/Labs)
    - Labs from classes **DE1** 
    - DE1 Lecture PDF > [Link]( https://moodle.vutbr.cz/pluginfile.php/331523/mod_resource/content/3/DE1_lecture_part4_CZE.pdf)
+=======
+   ### Used:
+   - Theoretical knowledge from Digital-Electronics-1 Labs, 2021 > [Link]( https://github.com/tomas-fryza/Digital-electronics-1/tree/master/Labs)
+   - Labs from classes from DE1 
+   - DE1 Lecture PDF > [Link]( https://moodle.vutbr.cz/pluginfile.php/331523/mod_resource/content/3/DE1_lecture_part4_CZE.pdf)
+   -
+   -
+   ### Links:
+>>>>>>> 8f84b202f57888dbd8a43caef93f34f7567aad51
    - [7 Segment Display]( https://docs.rs-online.com/6e0e/0900766b8130126b.pdf)
    - [Hall sensor](https://datasheet.lcsc.com/szlcsc/1811141821_MST-Magnesensor-Tech-MST-MH253ESO_C114369.pdf)
  
