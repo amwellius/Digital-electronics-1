@@ -47,7 +47,7 @@ Burnt calories will increase only by stepping the pedals, not by downhill riding
    ### Main Board
    ![image](images/tachometerBoard_front.png)
    ![image](images/tachometerBoard_back.png)
-   - [Schematic](files/tachometerBoard_schematic.pdf)
+   - [Schematic](http://github.com/mkousal/Digital-electronics-1-Tachometer/tree/main/files/tachometerBoard_schematic.pdf)
    - **Consists of:** three buttons, 7segment display, Pmod connectors, LED status and two connectors for Hall sensors
    - Board is made for direct connection to Arty A7 board. Three buttons are used to controlling the tachometer. LED at the top shows what value is now displayed at the display
    - Used seven segment display with middle double dot and dots for decimal is TDCG1050m - [datasheet](https://www.vishay.com/docs/83180/tdcx10x0m.pdf)
@@ -55,7 +55,7 @@ Burnt calories will increase only by stepping the pedals, not by downhill riding
    ### Hall sensor board
    ![image](images/encoderBoard_front.png)  
    ![image](images/encoderBoard_back.png)
-   - [Schematic](files/encoderBoard_schematic.pdf)
+   - [Schematic](http://github.com/mkousal/Digital-electronics-1-Tachometer/tree/main/files/encoderBoard_schematic.pdf)
    - Hall sensor board only consists of hall sensor and a few passive components that are described in datasheet and connector
    - You can screw it by using M3 screw to your bicycle
    - Used sensor is *MH253* - [datasheet](https://datasheet.lcsc.com/szlcsc/1811141821_MST-Magnesensor-Tech-MST-MH253ESO_C114369.pdf)
@@ -189,7 +189,7 @@ This block also contains a **function** which converts the traveled distance fro
    - TOP module represents the whole project
    - Final test schema can be seen below:
    ![image](images/top_tachometer.svg)
-   - After having **main board** and **hall sensor board** done, software can be written into Arty A7 board. Generated bitstream is available [here](sw/tachometer/tachometer.runs/impl_1/top.bit). <br/>
+   - After having **main board** and **hall sensor board** done, software can be written into Arty A7 board. Generated bitstream is available [here](http://github.com/mkousal/Digital-electronics-1-Tachometer/tree/main/sw/tachometer/tachometer.runs/impl_1/top.bit). <br/>
    ![image](images/implementation_completed.png)
 
 ## Video
